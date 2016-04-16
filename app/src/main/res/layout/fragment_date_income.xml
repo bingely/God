@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/back_date"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/left_date"
+            android:gravity="center"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/txt_18" />
+
+        <TextView
+            android:id="@+id/current_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/txt_18" />
+
+        <TextView
+            android:id="@+id/forward_date"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/right_date"
+            android:gravity="center"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/txt_18" />
+    </RelativeLayout>
+
+    <com.meetrend.haopingdian.widget.TasksCompletedView
+        android:id="@+id/income_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+    </com.meetrend.haopingdian.widget.TasksCompletedView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/bg_income"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/tv_xs"
+            style="@style/member_info_style1"
+            android:layout_margin="@dimen/global_margin"
+            android:layout_marginRight="@dimen/global_margin"
+            android:drawableLeft="@drawable/icon_online_amount"
+            android:drawablePadding="5dip"
+            android:text="线上收入" />
+
+        <LinearLayout 
+            android:id="@+id/ll_ly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/global_margin"
+            android:layout_alignTop="@+id/tv_xs"
+            android:layout_toRightOf="@+id/tv_xs"
+            android:orientation="vertical">
+            
+            <TextView
+            android:id="@+id/online_amount"
+            style="@style/member_info_style1"
+            android:layout_gravity="right" />
+            
+             <TextView
+            android:id="@+id/order_amount"
+            style="@style/member_info_style1"
+            android:layout_marginTop="14dp"
+            android:layout_gravity="right" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_xs"
+            android:layout_toRightOf="@+id/ll_ly"
+            android:orientation="vertical">
+            
+            <TextView
+            android:id="@+id/online_yuan"
+            style="@style/member_info_style1"
+            android:layout_alignTop="@+id/tv_md"
+            android:layout_marginTop="0dp"
+            android:layout_gravity="right" />
+            
+             <TextView
+            android:id="@+id/order_yuan"
+            style="@style/member_info_style1"
+            android:layout_marginTop="14dp"
+            android:layout_gravity="right" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_md"
+            style="@style/member_info_style1"
+            android:layout_margin="@dimen/global_margin"
+            android:layout_below="@+id/tv_xs"
+            android:drawableLeft="@drawable/icon_order_amount"
+            android:drawablePadding="5dip"
+            android:text="门店收入" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

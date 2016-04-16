@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:textColor="#858585"
+    android:text="1.阅读性能优化"
+    android:textSize="15sp"
+    android:paddingTop="6dip"
+    android:paddingBottom="6dip"
+    android:id = "@+id/update_list_item_view">
+    </TextView>
+    
+

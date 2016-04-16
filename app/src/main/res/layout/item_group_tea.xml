@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_bg" >
+
+    <TextView
+        android:id="@+id/tv_tea_name"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingLeft="18dip"
+        android:paddingTop="16dip"
+        android:paddingBottom="16dip"
+        android:singleLine="true"
+        android:text="生茶"
+        android:textColor="@color/text_small_black"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/mGroupimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp" />
+
+</RelativeLayout>

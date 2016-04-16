@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <com.meetrend.haopingdian.wheel.widget.WheelView
+        android:id="@+id/hour"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+    <com.meetrend.haopingdian.wheel.widget.WheelView
+        android:id="@+id/mins"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

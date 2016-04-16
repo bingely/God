@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/bar"
+        style="@style/actionbar_style"
+        android:layout_alignParentTop="true">
+        <include layout="@layout/include_actionbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_member_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bar"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="26dip"
+            android:background="#f7f7f7"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:text="@string/title_feedback_content"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/middle_text_size" />
+
+
+        <com.meetrend.haopingdian.widget.MyEditText
+            android:id="@+id/feedback_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filename"
+            android:focusable="true"
+            android:gravity="left|top"
+            android:hint="请简要描述您的问题和意见"
+            android:maxLength="100"
+            android:minHeight="100dip"
+            android:paddingLeft="15dip"
+            android:paddingTop="10dip"
+            android:textColor="@color/gray_text"
+            android:textCursorDrawable="@drawable/editcursor_bg"
+            android:textSize="@dimen/big_text_size" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="26dip"
+            android:background="#f7f7f7"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:text="图片（选填，提供问题截图）"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/middle_text_size" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="20dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="20dip">
+
+            <com.meetrend.haopingdian.widget.GridView
+                android:id="@+id/feedback_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:columnWidth="60dp"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:listSelector="#00000000"
+                android:numColumns="auto_fit"
+                android:padding="10dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/submit_ok"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:layout_margin="@dimen/margin_20"
+            android:background="@drawable/button_green"
+            android:gravity="center"
+            android:padding="@dimen/margin_10"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

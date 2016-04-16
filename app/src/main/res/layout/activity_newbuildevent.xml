@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/two_widget_title_layout" />
+
+    <com.meetrend.haopingdian.util.BounceScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:overScrollMode="never" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f7f7f7"
+            android:orientation="vertical" >
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginTop="20dip" />
+
+            <LinearLayout style="@style/new_build_linear_style" >
+
+                <TextView
+                    style="@style/new_buil_textview_style"
+                    android:text="活动主题" />
+
+                <EditText
+                    android:id="@+id/event_name_view"
+                    style="@style/new_buil_edit_style"
+                    android:ellipsize="end"
+                    android:hint="请输入活动主题"
+                    android:maxLength="50" />
+            </LinearLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginTop="20dip" />
+
+            <LinearLayout
+                style="@style/new_build_linear_style"
+                android:background="@drawable/list_item_bg"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/new_buil_textview_style"
+                    android:text="开始时间" />
+
+                <TextView
+                    android:id="@+id/event_start_time_view"
+                    style="@style/new_buil_right_textview_style"
+                    android:text="未设置" />
+
+                <ImageView style="@style/new_buil_arrow_img" />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginLeft="@dimen/new_build_paddinglet" />
+
+            <LinearLayout
+                style="@style/new_build_linear_style"
+                android:background="@drawable/list_item_bg"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/new_buil_textview_style"
+                    android:text="结束时间" />
+
+                <TextView
+                    android:id="@+id/event_end_time_view"
+                    style="@style/new_buil_right_textview_style"
+                    android:text="未设置" />
+
+                <ImageView style="@style/new_buil_arrow_img" />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginLeft="@dimen/new_build_paddinglet" />
+
+            <LinearLayout
+                style="@style/new_build_linear_style"
+                android:background="@drawable/list_item_bg"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/new_buil_textview_style"
+                    android:text="报名截止" />
+
+                <TextView
+                    android:id="@+id/event_apply_stop_time_view"
+                    style="@style/new_buil_right_textview_style"
+                    android:text="未设置" />
+
+                <ImageView style="@style/new_buil_arrow_img" />
+            </LinearLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginTop="20dip" />
+
+            <LinearLayout style="@style/new_build_linear_style" >
+
+                <TextView
+                    style="@style/new_buil_textview_style"
+                    android:text="活动地点" />
+
+                <EditText
+                    android:id="@+id/event_address_name_view"
+                    style="@style/new_buil_edit_style"
+                    android:hint="请输入活动具体地点" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/listview_line_color" />
+
+                <LinearLayout
+                    android:id="@+id/mapviewbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/list_item_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip" >
+
+                    <ImageView
+                        android:layout_width="35dip"
+                        android:layout_height="35dip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/location" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <TextView
+                style="@style/new_event_detail_textview_gray_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="3dip"
+                android:paddingLeft="15dip"
+                android:paddingTop="3dip"
+                android:text="活动详情" />
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <EditText
+                android:id="@+id/event_des_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="left|top"
+                android:hint="请输入活动详情"
+                android:maxLength="150"
+                android:minHeight="100dip"
+                android:padding="15dip"
+                android:textColor="@color/gray_text"
+                android:textCursorDrawable="@drawable/editcursor_bg"
+                android:textSize="14sp" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:minHeight="60dp"
+                android:paddingBottom="20dip" >
+
+                <com.meetrend.haopingdian.widget.GridView
+                    android:id="@+id/gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dip"
+                    android:background="#ffffff"
+                    android:columnWidth="60dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="auto_fit"
+                     android:listSelector="#00000000"
+                    android:padding="10dp"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+            </FrameLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginTop="20dip" />
+
+            <LinearLayout
+                style="@style/new_build_linear_style"
+                android:background="@drawable/list_item_bg"
+                android:clickable="true" >
+
+                <TextView
+                    style="@style/new_buil_textview_style"
+                    android:text="活动分类" />
+
+                <TextView
+                    android:id="@+id/event_name_type_view"
+                    style="@style/new_buil_right_textview_style" />
+
+                <ImageView style="@style/new_buil_arrow_img" />
+            </LinearLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginTop="20dip" />
+
+            <!--收费方式-->
+            <LinearLayout
+                android:id = "@+id/paystatus_layout"
+                style="@style/new_build_linear_style"
+                android:background="@drawable/list_item_bg"
+                android:clickable="true" >
+                <TextView
+                    style="@style/new_buil_textview_style"
+                    android:text="收费方式" />
+
+                <TextView
+                    android:id="@+id/event_pay_status"
+                    style="@style/new_buil_right_textview_style"
+                    android:text="未设置"/>
+                <ImageView
+                    android:id = "@+id/right_arrow_img"
+                    style="@style/new_buil_arrow_img" />
+            </LinearLayout>
+
+            <View
+                android:id = "@+id/pay_type_bottom_line"
+                android:visibility="gone"
+                style="@style/horizontal_no_margin_divider_style" />
+            <!--活动限制人数-->
+            <LinearLayout
+                android:id = "@+id/limit_people_layout"
+                style="@style/new_build_linear_style"
+                android:background="@drawable/list_item_bg"
+                android:clickable="true"
+                android:visibility="gone">
+                <TextView
+                    style="@style/new_buil_textview_style"
+                    android:text="活动限制人数" />
+
+                <EditText
+                    android:id="@+id/event_people_num_view"
+                    style="@style/new_buil_edit_style"
+                    android:digits="0123456789"
+                    android:hint="请输入活动的限制人数"
+                    android:inputType="number" />
+            </LinearLayout>
+                <!--收费设置-->
+            <LinearLayout
+                android:id = "@+id/paysetting_layout"
+                style="@style/new_build_linear_style"
+                android:visibility="gone"
+                android:background="@drawable/list_item_bg"
+                android:clickable="true" >
+                <TextView
+                    style="@style/new_buil_textview_style"
+                    android:text="费用设置" />
+                <TextView
+                    android:id="@+id/event_paysetting_text"
+                    style="@style/new_buil_right_textview_style"
+                    android:text="未设置"/>
+
+                <ImageView style="@style/new_buil_arrow_img" />
+            </LinearLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="20dip"
+                android:paddingBottom="30dip" >
+
+                <Button
+                    android:id="@+id/new_build_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/comment_btn_height"
+                    android:background="@drawable/button_green"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+            </FrameLayout>
+        </LinearLayout>
+    </com.meetrend.haopingdian.util.BounceScrollView>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/numviewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/new_event_detail_paddingleft"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/numview"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/green_text"
+                android:textSize="@dimen/new_event_detail_big_size" />
+
+            <TextView
+                android:id="@+id/hintview"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/numview"
+                android:gravity="center_vertical"
+                android:textColor="#252525"
+                android:textSize="@dimen/new_event_detail_big_size" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/listview_line_color" />
+
+        <com.meetrend.haopingdian.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null" />
+    </LinearLayout>
+
+
+</FrameLayout>

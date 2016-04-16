@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/configlayout"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:iosui="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:clipToPadding="true"
+              android:orientation="vertical"
+              tools:context="com.meetrend.haopingdian.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/container_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/black_line_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/chat_edit_layout_bg"
+        android:paddingBottom="2dip"
+        android:paddingTop="4dip">
+<!--
+        <RelativeLayout style="@style/toggle_layout_style">-->
+
+            <com.meetrend.haopingdian.widget.UIToggleButton
+                android:id="@+id/uitb_msg"
+                style="@style/toggle_btn_style"
+                android:layout_weight="1"
+                iosui:toggle_background="@drawable/button_msg"
+                iosui:toggle_text="消息"/>
+<!--        </RelativeLayout>-->
+
+   <!--     <RelativeLayout style="@style/toggle_layout_style">-->
+
+            <com.meetrend.haopingdian.widget.UIToggleButton
+                android:id="@+id/uitb_member"
+                style="@style/toggle_btn_style"
+                android:layout_weight="1"
+                iosui:toggle_background="@drawable/button_contact"
+                iosui:toggle_text="通讯录"/>
+    <!--    </RelativeLayout>-->
+
+        <!--<RelativeLayout
+            android:id="@+id/layout_order"
+            style="@style/toggle_layout_style">-->
+
+            <com.meetrend.haopingdian.widget.UIToggleButton
+                android:id="@+id/uitb_order"
+                android:layout_weight="1"
+                style="@style/toggle_btn_style"
+                iosui:toggle_background="@drawable/button_order"
+                iosui:toggle_text="管理"/>
+<!--        </RelativeLayout>-->
+
+      <!--  <RelativeLayout
+            android:id="@+id/layout_inventory"
+            style="@style/toggle_layout_style">-->
+
+            <com.meetrend.haopingdian.widget.UIToggleButton
+                android:id="@+id/uitb_inventory"
+                style="@style/toggle_btn_style"
+                android:layout_weight="1"
+                iosui:toggle_background="@drawable/button_inventory"
+                iosui:toggle_text="我"/>
+        <!--</RelativeLayout>-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<com.meetrend.haopingdian.widget.ScrollLayout
+        android:id="@+id/main_scrolllayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <fragment
+            android:id="@+id/fragment_message"
+            class="com.meetrend.haopingdian.fragment.MessageListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <FrameLayout
+            android:id="@+id/layout_member_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <FrameLayout
+            android:id="@+id/layout_order_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <FrameLayout
+            android:id="@+id/layout_setting_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.meetrend.haopingdian.widget.ScrollLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.2px"
+        android:background="@color/black_line_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/chat_edit_layout_bg"
+        android:paddingBottom="2dip"
+        android:paddingTop="2dip">
+
+        <RelativeLayout style="@style/toggle_layout_style">
+
+            <com.meetrend.haopingdian.widget.UIToggleButton
+                android:id="@+id/uitb_msg"
+                style="@style/toggle_btn_style"
+                iosui:toggle_background="@drawable/button_msg"
+                iosui:toggle_text="消息"/>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/toggle_layout_style">
+
+            <com.meetrend.haopingdian.widget.UIToggleButton
+                android:id="@+id/uitb_member"
+                style="@style/toggle_btn_style"
+                iosui:toggle_background="@drawable/button_contact"
+                iosui:toggle_text="通讯录"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_order"
+            style="@style/toggle_layout_style">
+
+            <com.meetrend.haopingdian.widget.UIToggleButton
+                android:id="@+id/uitb_order"
+                style="@style/toggle_btn_style"
+                iosui:toggle_background="@drawable/button_order"
+                iosui:toggle_text="管理"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_inventory"
+            style="@style/toggle_layout_style">
+
+            <com.meetrend.haopingdian.widget.UIToggleButton
+                android:id="@+id/uitb_inventory"
+                style="@style/toggle_btn_style"
+                iosui:toggle_background="@drawable/button_inventory"
+                iosui:toggle_text="我"/>
+        </RelativeLayout>
+    </LinearLayout>-->

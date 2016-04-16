@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_bg" >
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" >
+
+      <!--   <ImageView
+            android:id="@+id/location_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:src="@drawable/sign_red_icon" /> -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="40dip"
+            android:gravity="left" >
+
+            <TextView
+                android:id="@+id/addressname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="南山天虹"
+                android:textColor="#111111"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/addreesdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addressname"
+                android:singleLine="true"
+                android:text="广东省深圳市桃园路12号"
+                android:textColor="#707070"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/chekimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:src="@drawable/address_list_select_icon"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_alignLeft="@id/layout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dip"
+        android:background="@color/listview_line_color" />
+
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+     xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    style="@style/chat_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/item_chatright_time"
+        style="@style/chat_time_style" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/item_chat_right_xxx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dip"
+            android:layout_weight="1" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/right_record_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#444444"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/item_chatright_dummy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <com.meetrend.haopingdian.widget.ProgressWheel
+                        xmlns:wheel="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/item_chatright_pb"
+                        style="@android:style/Widget.ProgressBar.Small"
+                        android:layout_width="15dip"
+                        android:layout_height="15dip"
+                        android:layout_gravity="center_vertical"
+                        android:visibility="gone"
+                        wheel:matProg_barColor="#ff0000"
+                        wheel:matProg_barWidth="2dip"
+                        wheel:matProg_progressIndeterminate="true" />
+
+                    <ImageView
+                        android:id="@+id/item_chatright_failed"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/msg_failed"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <com.meetrend.haopingdian.widget.FaceiconTextView
+                    android:id="@+id/item_chatright_content"
+                    style="@style/right_chat_content_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dip"
+                    android:layout_marginRight="@dimen/chat_tv_margin_left_or_right"
+                    android:background="@drawable/chatto_bg"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="20dip"
+                    emojicon:faceiconSize="30sp" />
+
+                <RelativeLayout
+                    android:id="@+id/right_img_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:visibility="gone" >
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/item_chatright_image"
+                        android:layout_width="120dip"
+                        android:layout_height="160dip"
+                        android:scaleType="centerCrop"
+                        fresco:actualImageScaleType="centerCrop"
+                        fresco:placeholderImage="@drawable/loading_default"
+                        fresco:retryImageScaleType="centerCrop"
+                        fresco:roundAsCircle="false"
+                        fresco:roundBottomLeft="true"
+                        fresco:roundBottomRight="true"
+                        fresco:roundTopLeft="true"
+                        fresco:roundTopRight="true"
+                        fresco:roundedCornerRadius="8dp" />
+                    
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+           
+            android:id="@+id/item_chatright_photo"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:scaleType="centerCrop"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/loading_default"
+            fresco:retryImageScaleType="centerCrop"
+            fresco:roundAsCircle="false"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="0dp" />
+    </LinearLayout>
+
+</LinearLayout>

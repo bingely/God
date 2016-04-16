@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/window_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        style="@style/actionbar_style">
+        <include layout="@layout/include_actionbar"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="10dip">
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_search"
+            android:drawablePadding="10dip"
+            android:hint="请入搜索关键字"
+            android:padding="3dip"
+            android:paddingLeft="10dip"
+            android:textColor="#252525"
+            android:textColorHint="@color/gray_text"
+            android:textCursorDrawable="@drawable/editcursor_bg"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#4cd964"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ListView
+                android:id="@+id/lv_contact_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@null"
+                android:divider="@color/listview_line_color"
+                android:dividerHeight="1.2px"
+                android:fastScrollEnabled="false"/>
+
+            <TextView
+                android:id="@+id/no_searchlist_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/window_bg_color"
+                android:gravity="top|center_horizontal"
+                android:paddingTop="50dip"
+                android:text="@string/no_search_list"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/big_text_size"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+
+        <include layout="@layout/right_alphat_sidebar_layout"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

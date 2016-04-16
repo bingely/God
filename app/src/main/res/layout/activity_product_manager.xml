@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <!--标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/happyred"
+        android:paddingLeft="@dimen/actionbar_paddingLeft">
+
+        <ImageView
+            android:id="@+id/actionbar_home"
+            style="@style/actionbar_home_style" />
+
+        <TextView
+            android:id="@+id/actionbar_title"
+            style="@style/actionbar_title_style" />
+
+        <ImageView
+            android:id="@+id/product_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:padding="10dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/add_check" />
+
+        <ImageView
+            android:id="@+id/choose_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@id/product_add"
+            android:scaleType="centerCrop"
+            android:src="@drawable/choose" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/window_bg">
+        <!--搜索-->
+        <include layout="@layout/head_search_layout" />
+
+        <LinearLayout
+            android:id = "@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="48dp"
+            android:orientation="horizontal">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="23"
+                android:background="#ebedf0"
+                android:fadingEdge="none"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/left_container_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="9"
+                android:background="#f7f7f7"
+                android:orientation="vertical">
+
+                <com.meetrend.haopingdian.widget.PinnedHeaderListView
+                    android:id="@+id/pinnedListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@null"
+                    android:fadingEdge="none"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 用于包裹pop-->
+        <FrameLayout
+            android:id="@+id/popwindow_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </FrameLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

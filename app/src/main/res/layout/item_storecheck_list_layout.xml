@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f7f7f7"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <View style="@style/horizontal_no_margin_divider_style" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/list_item_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="18dip"
+            android:paddingRight="18dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="商品名称"
+                android:textColor="#252525"
+                android:textSize="@dimen/order_tea_txtsize" />
+
+            <TextView
+                android:id="@+id/tv_teaname"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:drawablePadding="5dip"
+                android:drawableRight="@drawable/right_arrow"
+                android:ellipsize="end"
+                android:gravity="right|center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/order_tea_txtsize" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="18dip"
+            android:background="@color/listview_line_color" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="73dip"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tv_shop_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="left"
+                android:ellipsize="end"
+                android:padding="@dimen/margin_18"
+                android:singleLine="true"
+                android:text="实盘数量"
+                android:textColor="#252525"
+                android:textSize="@dimen/order_tea_txtsize" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/input_bg"
+                android:orientation="horizontal"
+                android:paddingLeft="1px"
+                android:paddingRight="1px" >
+
+                <ImageView
+                    android:id="@+id/img_subtraction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_subtraction" />
+
+                <EditText
+                    android:id="@+id/ed_contacts"
+                    android:layout_width="90dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:digits="01234656789.0-"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/text_small_black"
+                    android:textCursorDrawable="@drawable/editcursor_bg"
+                    android:textSize="@dimen/order_tea_txtsize" />
+
+                <ImageView
+                    android:id="@+id/img_addition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@drawable/icon_addition" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="18dip"
+            android:background="@color/listview_line_color" />
+
+        <!--
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="18dip"
+                android:text="茶品单价"
+                android:textColor="#252525"
+                android:textSize="@dimen/order_tea_txtsize" />
+
+            <TextView
+                android:id="@+id/one_price_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_dis_18"
+                android:textColor="@color/gray_text"
+                android:textSize="16sp" />
+        </RelativeLayout> 
+
+        <View style="@style/horizontal_no_margin_divider_style" />
+        -->
+
+        <RelativeLayout
+            android:id="@+id/del_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:background="#ffffff"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/del_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/del_tea" />
+
+            <TextView
+                android:id="@+id/tv_add_tea"
+                android:layout_width="wrap_content"
+                android:layout_height="60dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/del_icon"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="删除商品"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/big_text_size" />
+        </RelativeLayout>
+
+        <View style="@style/horizontal_no_margin_divider_style" />
+    </LinearLayout>
+
+</LinearLayout>

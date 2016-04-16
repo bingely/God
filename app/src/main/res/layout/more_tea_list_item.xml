@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="71dip"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    android:padding="10dip" >
+
+    <ImageView
+        android:id="@+id/more_tea_imgview"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/loading_failed" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/more_tea_name_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#111111"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxLength="8"
+            android:textSize="@dimen/order_tea_txtsize" />
+
+        <TextView
+            android:id="@+id/more_tea_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:textColor="#111111"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="@dimen/order_tea_txtsize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginLeft="20dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/more_tea_num_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#111111"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="@dimen/order_tea_txtsize" />
+
+        <TextView
+            android:id="@+id/more_tea_total_price_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="#111111"
+            android:textSize="@dimen/order_tea_txtsize" />
+    </LinearLayout>
+
+</LinearLayout>

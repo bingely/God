@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+   <!-- <RelativeLayout
+        android:id="@+id/connact_searchlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dip"
+        android:layout_marginLeft="14dip"
+        android:layout_marginRight="14dip"
+        android:layout_marginTop="7dp"
+        android:clickable="true"
+        android:background="@drawable/bg_white"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/icon_search"
+            android:drawablePadding="2dip"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="搜索"
+            android:textColor="#a6a6a6"
+            android:textSize="16sp" />
+    </RelativeLayout>-->
+
+    <include
+        layout = "@layout/head_search_layout"/>
+
+
+    <RelativeLayout
+        android:id="@+id/connact_group_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:background="@drawable/list_item_bg"
+        android:paddingLeft="14dip"
+        android:visibility="gone">
+         
+
+        <ImageView
+            android:id="@+id/top_group_img"
+            style="@style/list_image_style"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="1dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/member_group" />
+
+        <TextView
+            android:id="@+id/top_group_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:layout_toRightOf="@id/top_group_img"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="分组"
+            android:textColor="@color/text_small_black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.2px"
+        android:divider="@color/listview_line_color" />
+
+</LinearLayout>

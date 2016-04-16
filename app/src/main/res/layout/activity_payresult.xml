@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" 
+    android:background="@color/window_bg_color">
+
+    <include layout="@layout/two_widget_title_layout" />
+
+    <ImageView
+        android:layout_width="61dip"
+        android:layout_height="61dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dip"
+        android:src="@drawable/pay_success" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dip"
+        android:gravity="center"
+        android:text="结账成功"
+        android:textColor="#111111"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/moneyview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="37dip"
+        android:gravity="center"
+        android:textColor="#111111"
+        android:textSize="43sp" />
+
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/comment_btn_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="61dip"
+        android:background="@drawable/button_green"
+        android:gravity="center"
+        android:text="完  成"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+</LinearLayout>

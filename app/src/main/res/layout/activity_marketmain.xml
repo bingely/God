@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/two_widget_title_layout" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="180dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="10dip"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/search_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:src="@drawable/icon_search" />
+
+                    <EditText
+                        android:id="@+id/tea_search_edit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/market_search_edit_bg"
+                        android:gravity="center_vertical"
+                        android:hint="请输入商品名称"
+                        android:paddingLeft="33dip"
+                        android:paddingRight="42dip"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textColorHint="#b1b1b1"
+                        android:textCursorDrawable="@drawable/editcursor_bg"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/clearbtn"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/clear_pressed"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tea_searchbtn"
+                    android:layout_width="84dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="-3dip"
+                    android:background="@drawable/market_search_btn"
+                    android:gravity="center"
+                    android:padding="5dip"
+                    android:text="搜索"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/hot_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dip"
+                android:layout_marginLeft="17dip"
+                android:layout_marginTop="17dip"
+                android:text="热门搜索"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <com.meetrend.haopingdian.widget.XCFlowLayout
+                android:id="@+id/flowlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dip"
+                android:layout_marginRight="18dip"
+                android:clickable="true" >
+            </com.meetrend.haopingdian.widget.XCFlowLayout>
+        </LinearLayout>
+
+</LinearLayout>

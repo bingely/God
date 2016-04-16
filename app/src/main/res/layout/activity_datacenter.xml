@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:data="http://schemas.android.com/apk/res/com.meetrend.haopingdian"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" 
+    android:background="#f7f7f7">
+
+    <include layout="@layout/three_widget_titlelayout" />
+
+    <com.meetrend.haopingdian.util.BounceScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@color/window_bg_color"
+        android:overScrollMode="never" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <!-- 今日收入 -->
+
+            <com.meetrend.haopingdian.widget.DataCenterItemView
+                android:id="@+id/todayincommeview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/data_item_margin_top"
+                android:clickable="true"
+                data:data_icon="@drawable/icon_iincome"
+                data:data_money="0"
+                data:data_title="今日收入 （元）：" />
+
+            <!-- 今日下单 -->
+
+            <com.meetrend.haopingdian.widget.DataCenterItemView
+                android:id="@+id/todayorderview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/data_item_margin_top"
+                android:clickable="true"
+                data:data_icon="@drawable/icon_single"
+                data:data_money="0"
+                data:data_title="今日下单（笔）：" />
+
+            <!-- 今日访客 -->
+
+            <com.meetrend.haopingdian.widget.DataCenterItemView
+                android:id="@+id/todaycomstomerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/data_item_margin_top"
+                android:clickable="true"
+                data:data_icon="@drawable/icon_visitors"
+                data:data_money="0"
+                data:data_title="今日访客 （人）：" />
+
+            <!-- 今日新增客户 -->
+
+            <com.meetrend.haopingdian.widget.DataCenterItemView
+                android:id="@+id/todaynewaddcomview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/data_item_margin_top"
+                android:layout_marginTop="@dimen/data_item_margin_top"
+                android:clickable="true"
+                data:data_icon="@drawable/icon_new_customer"
+                data:data_money="0"
+                data:data_title="今日新增客户（人）：" />
+        </LinearLayout>
+    </com.meetrend.haopingdian.util.BounceScrollView>
+
+</LinearLayout>

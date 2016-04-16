@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/toptitle_layout"
+        style="@style/actionbar_style" >
+
+        <include layout="@layout/include_actionbar" />
+    </LinearLayout>
+
+    <com.meetrend.haopingdian.util.BounceScrollView
+        android:id="@+id/sv_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/toptitle_layout" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layout_member_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/top_hint_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffdfdf"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="18dip"
+                    android:paddingTop="10dip"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/warn_details" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dip"
+                        android:paddingTop="1dip"
+                        android:singleLine="true"
+                        android:text="用户未关注或超48小时未发起聊天，不能发送消息"
+                        android:textColor="#5a5a5a"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="14dip" >
+
+                    <FrameLayout
+                        android:id="@+id/photolayout"
+                        android:layout_width="72dip"
+                        android:layout_height="72dip"
+                        android:layout_gravity="center_vertical" >
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/iv_member_detail_photo"
+                            android:layout_width="65dip"
+                            android:layout_height="65dip"
+                            android:layout_gravity="center_horizontal"
+                            fresco:placeholderImage="@drawable/loading_default"
+                            fresco:retryImageScaleType="centerCrop"
+                            fresco:roundAsCircle="false"
+                            fresco:roundBottomLeft="true"
+                            fresco:roundBottomRight="true"
+                            fresco:roundTopLeft="true"
+                            fresco:roundTopRight="true"
+                            fresco:roundedCornerRadius="5dp" />
+
+                        <ImageView
+                            android:id="@+id/undestributeimg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/wfp_b"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="65dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="14dip" >
+
+                        <LinearLayout
+                            android:id="@+id/personlayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="1dip"
+                            android:paddingRight="14dip">
+
+                            <TextView
+                                android:id="@+id/iv_member_detail_name"
+                                android:layout_width="0dip"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:singleLine="true"
+                                android:textColor="@color/text_small_black"
+                                android:textSize="17sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_member_detail_gender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dip"
+                                android:scaleType="centerCrop" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/iv_member_wx_name"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/personlayout"
+                            android:layout_marginTop="2dip"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_text"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View style="@style/horizontal_no_margin_divider_style" />
+
+                <LinearLayout
+                    style="@style/setting_me_layout_style2"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/me_info_style"
+                        android:text="手机号"
+                        android:textColor="@color/text_small_black" />
+
+                    <TextView
+                        android:id="@+id/et_member_detail_phone"
+                        style="@style/me_info_style2"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@color/gray_text" />
+                </LinearLayout>
+
+                <View style="@style/horizontal_divider_style" />
+
+                <LinearLayout
+                    style="@style/setting_me_layout_style2"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/me_info_style"
+                        android:text="年龄段"
+                        android:textColor="@color/text_small_black" />
+
+                    <TextView
+                        android:id="@+id/tv_age"
+                        style="@style/me_info_style2"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@color/gray_text" />
+                </LinearLayout>
+
+                <View style="@style/horizontal_divider_style" />
+
+                <LinearLayout
+                    style="@style/setting_me_layout_style2"
+                    android:orientation="horizontal"
+                    android:paddingRight="0dip" >
+
+                    <TextView
+                        style="@style/me_info_style"
+                        android:text="客户经理"
+                        android:textColor="@color/text_small_black" />
+
+                    <LinearLayout
+                        android:id="@+id/ditributelayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/list_item_bg"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/customer_manager_tview"
+                            style="@style/me_info_style_child"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:textColor="@color/green_text" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="3dip"
+                            android:src="@drawable/fp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/horizontal_divider_style" />
+
+                <LinearLayout
+                    style="@style/setting_me_layout_style2"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/me_info_style"
+                        android:text="备注"
+                        android:textColor="@color/text_small_black" />
+
+                    <TextView
+                        android:id="@+id/tv_member_detail_note"
+                        style="@style/me_info_style2"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@color/gray_text" />
+                </LinearLayout>
+
+                <View style="@style/horizontal_no_margin_divider_style" />
+
+                <LinearLayout
+                    android:id="@+id/v_choose"
+                    style="@style/setting_me_layout_style2"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/me_info_style"
+                        android:layout_weight="1"
+                        android:text="已推荐"
+                        android:textColor="@color/text_small_black" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/above_gridview_line"
+                    style="@style/horizontal_divider_style" />
+
+                <LinearLayout
+                    android:id="@+id/gridlayout"
+                    style="@style/memberinof_gridview_parent_layout_style"
+                    android:orientation="horizontal" >
+
+                    <com.meetrend.haopingdian.widget.GridView
+                        android:id="@+id/img_choose"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:columnWidth="60dp"
+                        android:gravity="center"
+                        android:horizontalSpacing="10dp"
+                        android:numColumns="auto_fit"
+                        android:padding="10dp"
+                        android:listSelector="#00000000"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="10dp" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/msg_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/btn_reinvite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="5dip"
+                        android:background="@drawable/button_green"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_10"
+                        android:text="发送邀请"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/super_big_text_size"
+                        android:visibility="visible" />
+                    <TextView
+                        android:id="@+id/btn_sendmsg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_green"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_10"
+                        android:text="发送消息"
+                        android:visibility="gone"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/super_big_text_size" />
+
+                    <TextView
+                        android:id="@+id/btn_mobilemsg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/yellow_btn_bg"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_10"
+                        android:text="发送短信"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/super_big_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout 
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:orientation="vertical">
+                
+                    <TextView 
+                        android:id = "@+id/list_progressbar"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/gray_text"
+                        android:text="列表加载中..."
+                        android:visibility="gone"/>
+                
+		            <TextView
+		                android:id="@+id/txt_OrderRecord"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_margin="15dp"
+		                android:text="历史订单记录"
+		                android:textColor="@color/gray_text"
+		                android:visibility="gone" />
+		
+		            <com.meetrend.haopingdian.widget.MyListView
+		                android:id="@+id/listview"
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content"
+		                android:divider="@color/big_listview_line_color"
+		                android:dividerHeight="15dp"
+		                android:fadingEdge="none" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.meetrend.haopingdian.util.BounceScrollView>
+
+</RelativeLayout>

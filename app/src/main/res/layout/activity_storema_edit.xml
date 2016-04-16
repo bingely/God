@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_bg_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/three_widget_titlelayout"/>
+
+    <com.meetrend.haopingdian.util.BounceScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginTop="@dimen/margin_dis_15"
+                android:background="@color/listview_line_color"/>
+
+            <RelativeLayout
+                android:id="@+id/edit_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="73dip"
+                android:background="@drawable/list_item_bg"
+                android:paddingLeft="@dimen/margin_dis_15"
+                android:paddingRight="@dimen/margin_dis_15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="@string/head_text"
+                    android:textColor="@color/txt_black_color"
+                    android:textSize="@dimen/big_text_size"/>
+
+                <ImageView
+                    android:id="@+id/right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/right_arrow"/>
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/edit_circle_img"
+                    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@id/right_arrow"
+                    android:src="@drawable/loading_default"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/loading_default"
+                    fresco:retryImageScaleType="centerCrop"
+                    fresco:roundAsCircle="true"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_height"
+                android:background="@color/listview_line_color"/>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/margin_dis_15"
+                android:background="#f7f7f7"/>
+
+            <LinearLayout
+                android:id="@+id/center_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/listview_line_color"/>
+                <!--名称-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dip"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/margin_dis_15"
+                    android:paddingRight="@dimen/margin_dis_15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:text="@string/name_hint"
+                        android:textColor="@color/txt_black_color"
+                        android:textSize="@dimen/big_text_size"/>
+
+                    <FrameLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/name_edit"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical|left"
+                            android:maxLength="20"
+                            android:paddingLeft="15dip"
+                            android:paddingRight="30dip"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_text"
+                            android:textCursorDrawable="@drawable/editcursor_bg"
+                            android:textSize="@dimen/big_text_size"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:src="@drawable/clear_pressed"
+                            android:visibility="gone"/>
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:layout_marginLeft="@dimen/margin_dis_15"
+                    android:background="@color/listview_line_color"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dip"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/margin_dis_15"
+                    android:paddingRight="@dimen/margin_dis_15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:text="@string/money_hint"
+                        android:textColor="@color/txt_black_color"
+                        android:textSize="@dimen/big_text_size"/>
+
+                    <FrameLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/money_edit"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical|left"
+                            android:maxLength="20"
+                            android:paddingLeft="15dip"
+                            android:paddingRight="30dip"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_text"
+                            android:textCursorDrawable="@drawable/editcursor_bg"
+                            android:textSize="@dimen/big_text_size"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:src="@drawable/clear_pressed"
+                            android:visibility="gone"/>
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/listview_line_color"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/window_bg_color"
+                    android:gravity="top"
+                    android:paddingBottom="16dip"
+                    android:paddingLeft="10dip"
+                    android:paddingTop="8dip"
+                    android:text="*金额为0代表需要顾客自行输入付款金额"
+                    android:textColor="@color/txt_red_color"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_height"
+                android:background="@color/listview_line_color"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_dis_15"
+                android:paddingRight="@dimen/margin_dis_15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="@string/beizhu_text"
+                    android:textColor="@color/txt_black_color"
+                    android:textSize="@dimen/big_text_size"/>
+
+                <EditText
+                    android:id="@+id/beizhu_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15dip"
+                    android:background="@null"
+                    android:gravity="center_vertical|left"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_text"
+                    android:textCursorDrawable="@drawable/editcursor_bg"
+                    android:textSize="@dimen/big_text_size"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_height"
+                android:background="@color/listview_line_color"/>
+        </LinearLayout>
+    </com.meetrend.haopingdian.util.BounceScrollView>
+
+</LinearLayout>

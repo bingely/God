@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/three_widget_titlelayout" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gray_rect_height"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <View style="@style/line_style" />
+
+                <EditText
+                    android:id="@+id/product_name_edit"
+                    style="@style/add_productmanager_textviewsytle"
+                    android:layout_width="fill_parent"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:hint="请输入商品名称"
+                    android:maxLength="40"
+                    android:paddingLeft="@dimen/store_check_padding_left_right"
+                    android:singleLine="true" />
+
+                <View
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/store_check_padding_left_right" />
+
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dip"
+                    android:layout_marginRight="5dip"
+                    android:minHeight="80dip"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dip">
+
+                    <com.meetrend.haopingdian.widget.GridView
+                        android:id="@+id/product_pics_gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:columnWidth="75dp"
+                        android:gravity="center"
+                        android:horizontalSpacing="5dp"
+                        android:listSelector="#00000000"
+                        android:numColumns="auto_fit"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="5dp" />
+
+                </FrameLayout>
+
+                <View style="@style/line_style" />
+
+            </LinearLayout>
+
+
+            <!-- 商品类型-->
+            <View
+                style="@style/line_style"
+                android:layout_marginTop="@dimen/gray_rect_height" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/textview_height"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/add_productmanager_textviewsytle"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="@dimen/store_check_padding_left_right"
+                    android:text="商品类型"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_type_tv"
+                    style="@style/add_productmanager_textviewsytle"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dip"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:gravity="right|center_vertical"
+                    android:hint="请选择商品类型"
+                    android:paddingLeft="@dimen/store_check_padding_left_right"
+                    android:paddingRight="@dimen/margin_dis_15"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_text" />
+
+
+            </LinearLayout>
+
+            <View style="@style/line_style" />
+
+            <!--各类价格-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gray_rect_height"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <View style="@style/line_style" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/textview_height"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/store_check_padding_left_right"
+                        android:text="最低价"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/product_best_low_price_edit"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:digits=".0123456789"
+                        android:gravity="center_vertical|right"
+                        android:hint="请输入商品最低价"
+                        android:inputType="number"
+                        android:paddingRight="@dimen/margin_dis_15"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_text"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/store_check_padding_left_right" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/textview_height"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/store_check_padding_left_right"
+                        android:text="最高价"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/product_best_higher_price_edit"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:digits=".0123456789"
+                        android:gravity="center_vertical|right"
+                        android:hint="请输入商品最高价"
+                        android:inputType="number"
+                        android:paddingRight="@dimen/margin_dis_15"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_text"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/store_check_padding_left_right" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/textview_height"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/store_check_padding_left_right"
+                        android:text="原价"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/product_oriange_price_edit"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:digits=".0123456789"
+                        android:gravity="center_vertical|right"
+                        android:hint="请输入商品原价"
+                        android:inputType="number"
+                        android:paddingRight="@dimen/margin_dis_15"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_text"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/store_check_padding_left_right" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/textview_height"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/store_check_padding_left_right"
+                        android:text="零售价"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/product_linshou_price_edit"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:digits=".0123456789"
+                        android:gravity="center_vertical|right"
+                        android:hint="请输入商品零售价"
+                        android:inputType="number"
+                        android:paddingRight="@dimen/margin_dis_15"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_text"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/store_check_padding_left_right" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/textview_height"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/store_check_padding_left_right"
+                        android:text="单位"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/product_danwei_edit"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawablePadding="5dip"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical|right"
+                        android:hint="请选择商品单位"
+                        android:paddingRight="@dimen/margin_dis_15"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_text"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View style="@style/line_style" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/add_product_guige_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:drawableLeft="@drawable/product_mng_add"
+                    android:drawablePadding="10dip"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/store_check_padding_left_right"
+                    android:text="添加商品规格"
+                    android:textColor="#ff0000"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/input_guige_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gray_rect_height"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View style="@style/line_style" />
+
+                    <LinearLayout
+                        android:id="@+id/input_guige_sedlinear"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/textview_height"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/store_check_padding_left_right"
+                            android:text="规格"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/input_geige_eidt"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="@dimen/margin_dis_15"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:drawablePadding="5dip"
+                            android:gravity="center_vertical|right"
+                            android:hint="请输入商品规格"
+                            android:maxLength="20"
+                            android:paddingRight="@dimen/margin_dis_15"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/del_product_guige_frame"
+                            android:layout_width="50dip"
+                            android:layout_height="50dip"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="1dip"
+                                android:layout_height="fill_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="7dip"
+                                android:layout_marginTop="7dip"
+                                android:background="@color/listview_line_color" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/del_guige" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View style="@style/line_style" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--运费库存-->
+            <LinearLayout
+                android:id="@+id/chooseyunfeilayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gray_rect_height"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <View style="@style/line_style" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/textview_height"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/store_check_padding_left_right"
+                        android:text="运费类型"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/chooset_yunfei_type_tv"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawablePadding="5dip"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical|right"
+                        android:hint="请选择运费类型"
+                        android:paddingRight="@dimen/margin_dis_15"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_text"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/input_yunfei_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/textview_height"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        style="@style/line_style"
+                        android:layout_marginLeft="@dimen/store_check_padding_left_right" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/textview_height"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/yunfeihintview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/store_check_padding_left_right"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/input_product_yunfei_edit"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:digits=".0123456789"
+                            android:gravity="center_vertical|right"
+                            android:hint="请输入运费"
+                            android:inputType="number"
+                            android:paddingRight="@dimen/margin_dis_15"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray_text"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/choose_yunfeimoban_tv"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:drawablePadding="5dip"
+                            android:drawableRight="@drawable/right_arrow"
+                            android:gravity="center_vertical|right"
+                            android:hint="请选择运费"
+                            android:paddingRight="@dimen/margin_dis_15"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray_text"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/kucun_edit_above_line"
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/store_check_padding_left_right" />
+
+                <LinearLayout
+                    android:id="@+id/input_kucun_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/textview_height"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/store_check_padding_left_right"
+                        android:text="库存"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/input_product_kucun_edit"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:digits=".0123456789"
+                        android:gravity="center_vertical|right"
+                        android:hint="请输入商品库存"
+                        android:inputType="number"
+                        android:paddingRight="@dimen/margin_dis_15"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_text"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!--<View style="@style/line_style" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <View style="@style/line_style" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="23dip"
+                    android:background="@color/window_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dip"
+                    android:text="商品信息"
+                    android:textColor="@color/gray_text" />
+
+                <View style="@style/line_style" />
+
+                <EditText
+                    android:id="@+id/input_product_info_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="请输入商品信息"
+                    android:maxLength="50"
+                    android:minHeight="80dip"
+                    android:paddingBottom="8dip"
+                    android:paddingLeft="14dip"
+                    android:paddingRight="12dip"
+                    android:paddingTop="8dip"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_text"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <View style="@style/line_style" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="23dip"
+                    android:background="@color/window_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dip"
+                    android:text="规格参数"
+                    android:textColor="@color/gray_text" />
+
+                <View style="@style/line_style" />
+
+                <EditText
+                    android:id="@+id/input_product_params_info_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="请输入规格参数信息"
+                    android:maxLength="50"
+                    android:minHeight="80dip"
+                    android:paddingBottom="8dip"
+                    android:paddingLeft="14dip"
+                    android:paddingRight="12dip"
+                    android:paddingTop="8dip"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_text"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <View style="@style/line_style" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="23dip"
+                    android:background="@color/window_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dip"
+                    android:text="售后保障"
+                    android:textColor="@color/gray_text" />
+
+                <View style="@style/line_style" />
+
+                <EditText
+                    android:id="@+id/input_product_after_sell_info_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="请输入售后保障"
+                    android:maxLength="50"
+                    android:minHeight="80dip"
+                    android:paddingBottom="8dip"
+                    android:paddingLeft="14dip"
+                    android:paddingRight="12dip"
+                    android:paddingTop="8dip"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_text"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

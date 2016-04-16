@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_container"
+    android:layout_width="285dip"
+    android:layout_height="59dip"
+    android:alpha="0.8"
+    android:background="@drawable/pop_bg"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip">
+
+    <LinearLayout
+        android:id="@+id/pop_edit"
+        android:layout_width="@dimen/pop_item_width"
+        android:layout_height="@dimen/pop_item_height"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="22dip"
+            android:layout_height="22dip"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pop_edit" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:text="编辑"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/pop_item_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1.2dip"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="15dip"
+        android:layout_marginTop="15dip"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:id="@+id/pop_puton"
+        android:layout_width="@dimen/pop_item_width"
+        android:layout_height="@dimen/pop_item_height"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="22dip"
+            android:layout_height="22dip"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pop_puton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:text="上架"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/pop_item_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1.2dip"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="15dip"
+        android:layout_marginTop="15dip"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:id="@+id/pop_putdown"
+        android:layout_width="@dimen/pop_item_width"
+        android:layout_height="@dimen/pop_item_height"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="22dip"
+            android:layout_height="22dip"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pop_putdown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:text="下架"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/pop_item_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1.2dip"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="15dip"
+        android:layout_marginTop="15dip"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:id="@+id/pop_del"
+        android:layout_width="@dimen/pop_item_width"
+        android:layout_height="@dimen/pop_item_height"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="22dip"
+            android:layout_height="22dip"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pop_del" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:text="删除"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/pop_item_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1.2dip"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="15dip"
+        android:layout_marginTop="15dip"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:id="@+id/pop_share"
+        android:layout_width="@dimen/pop_item_width"
+        android:layout_height="@dimen/pop_item_height"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="22dip"
+            android:layout_height="22dip"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pop_share" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:text="分享"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/pop_item_size" />
+    </LinearLayout>
+
+
+</LinearLayout>

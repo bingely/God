@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7" >
+
+    <LinearLayout
+        android:id="@+id/bar"
+        style="@style/actionbar_style" >
+
+        <include layout="@layout/include_actionbar"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/bar" >
+
+        <com.meetrend.swipemenulistview.SwipeMenuListView
+            android:id="@+id/lv_group_member_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/listview_line_color"
+            android:dividerHeight="1.2px" />
+
+
+        <include layout="@layout/listview_empty_view_layout" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

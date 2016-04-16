@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/two_widget_title_layout" />
+
+    <com.meetrend.haopingdian.util.BounceScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:overScrollMode="never" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f7f7f7"
+            android:orientation="vertical" >
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginTop="20dip" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <!-- 添加产品 -->
+
+                <RelativeLayout
+                    android:id="@+id/add_check_tea_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="71dip"
+                    android:background="@drawable/list_item_bg"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/detail_add_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/check_goods" />
+                </RelativeLayout>
+
+                <!-- 一个产品 -->
+
+                <LinearLayout
+                    android:id="@+id/one_check_product_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="71dip"
+                    android:background="@drawable/list_item_bg"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="10dip"
+                    android:visibility="gone" >
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/tea_imgview"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        fresco:actualImageScaleType="centerCrop"
+                        fresco:placeholderImage="@drawable/loading_default"
+                        fresco:retryImageScaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dip"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tea_name_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/text_small_black"
+                            android:textSize="@dimen/order_tea_txtsize" />
+
+                        <TextView
+                            android:id="@+id/tea_num_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dip"
+                            android:singleLine="true"
+                            android:textColor="@color/text_small_black"
+                            android:textSize="@dimen/order_tea_txtsize" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/right_arrow" />
+                </LinearLayout>
+
+                <!-- 选择了多个茶产品 -->
+
+                <RelativeLayout
+                    android:id="@+id/more_check_product_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_bg"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:id="@+id/more_product_img_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="71dip"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="50dip"
+                            android:layout_height="50dip"
+                            android:layout_marginLeft="15dip"
+                            android:visibility="gone"
+                            fresco:actualImageScaleType="centerCrop"
+                            fresco:placeholderImage="@drawable/loading_default"
+                            fresco:retryImageScaleType="centerCrop" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="50dip"
+                            android:layout_height="50dip"
+                            android:layout_marginLeft="15dip"
+                            android:visibility="gone"
+                            fresco:actualImageScaleType="centerCrop"
+                            fresco:placeholderImage="@drawable/loading_default"
+                            fresco:retryImageScaleType="centerCrop" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="50dip"
+                            android:layout_height="50dip"
+                            android:layout_marginLeft="15dip"
+                            android:visibility="gone"
+                            fresco:actualImageScaleType="centerCrop"
+                            fresco:placeholderImage="@drawable/loading_default"
+                            fresco:retryImageScaleType="centerCrop" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/more_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="18dip"
+                        android:layout_toRightOf="@id/more_product_img_layout"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/more_view_icon" />
+
+                    <TextView
+                        android:id="@+id/product_count_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center_vertical"
+                        android:drawablePadding="3dip"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:paddingRight="@dimen/order_tea_margin"
+                        android:textColor="@color/text_small_black"
+                        android:textSize="@dimen/order_tea_txtsize" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="40dip" >
+
+                <View
+                    style="@style/horizontal_no_margin_divider_style"
+                    android:layout_marginTop="20dip" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <LinearLayout style="@style/store_check_linear_item_style" >
+
+                        <TextView
+                            style="@style/store_check_black_textview_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="微信总额" />
+
+                        <EditText
+                            android:id="@+id/weixin_money_view"
+                            style="@style/store_check_black_textview_style"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:digits="0123456789."
+                            android:gravity="right|center_vertical"
+                            android:hint="请输入微信总金额"
+                            android:inputType="number"
+                            android:textCursorDrawable="@drawable/editcursor_bg" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/horizontal_no_margin_divider_style"
+                        android:layout_marginLeft="15dip" />
+
+                    <LinearLayout style="@style/store_check_linear_item_style" >
+
+                        <TextView
+                            style="@style/store_check_black_textview_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="现金总额" />
+
+                        <EditText
+                            android:id="@+id/xianjin_money_view"
+                            style="@style/store_check_black_textview_style"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:digits="0123456789."
+                            android:gravity="right|center_vertical"
+                            android:hint="请输入现金金额"
+                            android:inputType="number"
+                            android:textCursorDrawable="@drawable/editcursor_bg" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/horizontal_no_margin_divider_style"
+                        android:layout_marginLeft="15dip" />
+
+                    <LinearLayout style="@style/store_check_linear_item_style" >
+
+                        <TextView
+                            style="@style/store_check_black_textview_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="刷卡总额" />
+
+                        <EditText
+                            android:id="@+id/shuaka_money_view"
+                            style="@style/store_check_black_textview_style"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:digits="0123456789."
+                            android:gravity="right|center_vertical"
+                            android:hint="请输入银行POS刷卡金额"
+                            android:inputType="number"
+                            android:textCursorDrawable="@drawable/editcursor_bg" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/horizontal_no_margin_divider_style"
+                        android:layout_marginLeft="15dip" />
+
+                    <LinearLayout style="@style/store_check_linear_item_style" >
+
+                        <TextView
+                            style="@style/store_check_black_textview_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="记账总额" />
+
+                        <EditText
+                            android:id="@+id/jizhang_money_view"
+                            style="@style/store_check_black_textview_style"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:digits="0123456789."
+                            android:gravity="right|center_vertical"
+                            android:hint="请输入记账金额"
+                            android:inputType="number"
+                            android:textCursorDrawable="@drawable/editcursor_bg" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/horizontal_no_margin_divider_style"
+                        android:layout_marginLeft="15dip" />
+
+                    <LinearLayout style="@style/store_check_linear_item_style" >
+
+                        <TextView
+                            style="@style/store_check_black_textview_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="收款总额" />
+
+                        <TextView
+                            android:id="@+id/shoukuan_money_view"
+                            style="@style/store_check_black_textview_style"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:digits="0123456789."
+                            android:gravity="right|center_vertical"
+                            android:inputType="number"
+                            android:text="0.00" />
+                    </LinearLayout>
+
+                    <View style="@style/horizontal_no_margin_divider_style" />
+                </LinearLayout>
+
+                <!-- 备注 -->
+
+                <View
+                    style="@style/horizontal_no_margin_divider_style"
+                    android:layout_marginTop="20dip" />
+
+                <LinearLayout
+                    style="@style/store_check_linear_item_style"
+                    android:background="@color/white" >
+
+                    <TextView
+                        style="@style/store_check_black_textview_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="备注" />
+
+                    <EditText
+                        android:id="@+id/beizhu_view"
+                        style="@style/store_check_grary_textview_style"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:maxLength="30"
+                        android:paddingLeft="10dip"
+                        android:textCursorDrawable="@drawable/editcursor_bg" />
+                </LinearLayout>
+
+                <View style="@style/horizontal_no_margin_divider_style" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.meetrend.haopingdian.util.BounceScrollView>
+
+    <Button
+        android:id="@+id/savebtn"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:background="@drawable/addcheck_btn_bg"
+        android:gravity="center"
+        android:text="保  存"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+</LinearLayout>

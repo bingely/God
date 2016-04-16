@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  -->
+    <color name="content_gray">#555555</color>
+
+    <color name="happyred">#e13023</color>
+    <color name="dividergray">#EFEFF4</color>
+
+    <color name="message_list_lightgray">#aaAAaa</color>
+
+    <color name="member_status_invited">#00B916</color>
+    <color name="popup_divider">#50000000</color>
+    <color name="popup_list_selector">#1E2224</color>
+    <color name="popup_background">#303537</color>
+
+    <color name="divider">#BFBFBF</color>
+
+    <color name="global_gray">#EFEFF4</color>
+
+    <color name="global_green">#00B916</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="red">#E13023</color>
+
+    <color name="gray">#DDDDDD</color>
+
+    <color name="gray_1">#a9a9a9</color>
+
+    <color name="black_1">#252525</color>
+    <color name="event_black">#787878</color>
+
+    <color name="green">#02BC00</color>
+
+    <color name="black">#3B3B3B</color>
+
+    <color name="orderblack">#A1A1A1</color>
+
+    <color name="window_bg">#f7f7f7</color>
+    <color name="line_color">#e7eaec</color>
+
+    <color name="translate">#00000000</color>
+
+    <color name="is_unenble">#d9d9d9</color>
+
+    <color name="background_tab_pressed">#dddddd</color>
+    <!--  dfe3e6 -->
+    <color name="listview_line_color">#dfe3e6</color>
+    <!--<color name="listview_line_color">#e0e0e0</color>-->
+    <!--统一字体颜色-->
+    <color name="text_large_black">#111111</color>
+    <color name="text_small_black">#252525</color>
+    <color name="text_red">#e13023</color>
+    <color name="gray_text">#797979</color>
+    <color name="low_gray_text">#c3c3c3</color>
+    <color name="green_text">#02bc00</color>
+    <!-- Activity fragment 背景颜色 -->
+    <color name="window_bg_color">#f7f7f7</color>
+
+
+    <color name="group_bg">#dddddd</color>
+
+    <color name="yellow">#53ff53</color>
+
+    <color name="black_line_color">#dfe3e6</color>
+
+    <color name="chat_edit_layout_bg">#f5f5f7</color>
+
+    <color name="big_listview_line_color">#EAEAEA</color>
+    <color name="txt_red_color">#f8302f</color>
+    <color name="txt_black_color">#000000</color>
+
+    <color name="small_yellow">#f78515</color>
+    <color name="un_enable_bg">#C0EECE</color>
+
+</resources>

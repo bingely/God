@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:orientation="horizontal"
+        android:background="#e4e4e4"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip" >
+
+        <TextView
+            android:id = "@+id/clear_discount_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dip"
+            android:text="清除"
+            android:textColor="#252525" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择优惠券"
+            android:textColor="#252525" />
+
+        <ImageView
+            android:id="@+id/clearbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="6dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:src="@drawable/close_print" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/listview_line_color" />
+
+    <ListView
+        android:id="@+id/discount_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="192dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:overScrollMode="never" />
+
+</LinearLayout>

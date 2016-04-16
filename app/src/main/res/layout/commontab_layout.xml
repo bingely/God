@@ -1,0 +1,178 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/first_tab"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_item_bg"
+            android:clickable="true"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="11dip" >
+
+            <TextView
+                android:id="@+id/frst_tab_topview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="#ff3b2d"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/frst_tab_bottom_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tab_margintop"
+                android:layout_marginTop="@dimen/tab_margintop"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="0.00"
+                android:textColor="#ff3b2d"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="3dip"
+                android:orientation="horizontal" >
+
+                <View
+                    android:id="@+id/first_diviver"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:background="#ff3b2d" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="13dip"
+            android:layout_marginTop="13dip"
+            android:background="#e3e3e3" />
+
+        <LinearLayout
+            android:id="@+id/sec_tab"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_item_bg"
+            android:clickable="true"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/sec_tab_topview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dip"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:textColor="#252525"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sec_tab_bottom_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tab_margintop"
+                android:layout_marginTop="@dimen/tab_margintop"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="#252525"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="3dip"
+                android:orientation="horizontal" >
+
+                <View
+                    android:id="@+id/sec_diviver"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:background="#ff3b2d"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="13dip"
+            android:layout_marginTop="13dip"
+            android:background="#e3e3e3" />
+
+        <LinearLayout
+            android:id="@+id/third_tab"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_item_bg"
+            android:clickable="true"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/third_top_topview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dip"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:textColor="#252525"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/third_tab_bottom_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tab_margintop"
+                android:layout_marginTop="@dimen/tab_margintop"
+                android:gravity="center_horizontal"
+                android:text="0.00"
+                android:ellipsize="end"
+                 android:singleLine="true"
+                android:textColor="#252525"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="3dip"
+                android:orientation="horizontal" >
+
+                <View
+                    android:id="@+id/third_diviver"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:background="#ff3b2d"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.2px"
+        android:background="#e3e3e3" />
+
+</LinearLayout>

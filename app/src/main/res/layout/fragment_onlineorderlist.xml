@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:iosui="http://schemas.android.com/apk/res/com.meetrend.haopingdian"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionbar_style" android:id="@+id/bar">"
+        <include layout="@layout/include_actionbar" />
+    </LinearLayout>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:id="@+id/layout_order_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.meetrend.haopingdian.widget.UISwitchButton
+                    android:id="@+id/uitb_unconfirm"
+                    style="@style/order_uiswitch_style"
+                    iosui:switch_text="未确认" />
+
+                <!-- <View style="@style/vertical_divider_style" /> -->
+
+                <com.meetrend.haopingdian.widget.UISwitchButton
+                    android:id="@+id/uitb_confirm"
+                    style="@style/order_uiswitch_style"
+                    iosui:switch_text="已确认" />
+                
+                
+                <com.meetrend.haopingdian.widget.UISwitchButton
+                    android:id="@+id/uitb_pay"
+                    style="@style/order_uiswitch_style"
+                    iosui:switch_text="已完成" />
+            </LinearLayout>
+
+            <View style="@style/horizontal_divider_style" />
+
+            <com.meetrend.haopingdian.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/lv_fragment_order"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:divider="#EAEAEA"
+                android:dividerHeight="18dp" />
+
+            <TextView
+                android:id="@+id/orderlist_empty"
+                style="@style/empty_listview_style" />
+        </LinearLayout>
+
+
+        <com.meetrend.haopingdian.widget.ProgressDialog
+            android:id="@+id/pd_orderlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionbar_style" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/actionbar_homeddd"
+                style="@style/actionbar_home_style" />
+
+            <TextView
+                android:id="@+id/actionbar_title"
+                style="@style/actionbar_title_style" />
+
+            <TextView
+                android:id="@+id/actionbar_action"
+                style="@style/actionbar_action_style" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.meetrend.haopingdian.widget.ProgressWebView
+        android:id="@+id/my_webview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
+
+
+</LinearLayout>

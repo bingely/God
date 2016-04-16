@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="179dip"
+    android:background="@drawable/shouquanma_dialog_shape"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="15dip" >
+
+        <ImageView
+            android:id="@+id/cancelView"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:padding="10dip"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cancleview_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="请输入授权密码"
+            android:textColor="#252525"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.2px"
+        android:background="#cccbd3" />
+    
+    <com.meetrend.haopingdian.widget.ShouquanMa_InputWidget 
+        android:id = "@+id/input_widget"
+        android:layout_height="wrap_content"
+        android:layout_width="277dip"
+        android:layout_marginTop="40dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginLeft="15dip"/>
+        
+
+</LinearLayout>

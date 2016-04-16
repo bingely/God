@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.meetrend.haopingdian"
+    android:versionCode="1"
+    android:versionName="1.0.17">
+
+
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 新增 -->
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~百度地图开始~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~百度地图结束~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+    <!-- 在sd卡中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 向SD卡写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_TIME_ZONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- <uses-permission android:name="getui.permission.GetuiService.第三方包名" /> -->
+    <uses-permission android:name="getui.permission.GetuiService.com.meetrend.haopingdian" />
+    <!-- 自定义权限 -->
+
+    <permission
+        android:name="getui.permission.GetuiService.com.meetrend.haopingdian"
+        android:protectionLevel="normal"></permission>
+    <!-- 个推SDK权限配置结束 -->
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+
+    <!-- ###################声明SDK使用的相关权限###################### -->
+    <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取mac地址作为用户的备用唯一标识 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取用户手机的IMEI，用来唯一的标识用户 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 缓存资源优先存入SDcard -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许应用程序联网，以便向我们的服务器端发送数据 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/about_white_logo"
+        android:label="@string/dayi_app_name"
+        android:theme="@style/Theme.AppCompat.Light">
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashScaleTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 旧百度地图 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="MnVnzRFnWvTenACtRK5v1HsB" />
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ForgetPwdActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.MapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.AccountActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.meetrend.account" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.VersionUpdateActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.AppUpdateTellActiity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ProductTypesChooseActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.MarketReferenceActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.StroeChangeActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.MarketMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        g
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.FuncationActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <service android:name="com.meetrend.haopingdian.activity.NotificationService">
+            <intent-filter android:priority="1000">
+                <action android:name="com.meetrend.haopingdian.activity.NotificationService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ChooseTimeListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.MeInfoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.TodayNewAddCustomersActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.PictrueBrowserActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.UnitChooseActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ProductSearchReportoryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.MarketPriceSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.TodayCustomersActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.PoiSignListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ProductMangerActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.CommitSignInfoActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.TodayOrderListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.BalancePayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ProductEditOrAddActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.StorePayCodeListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.MemberAddActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.TodayIncomeActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.InventoryCRUDActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.CarriageChooseTypeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.MemberInfoEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ChatActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.CurrencyPayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.WebViewActiity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.SearchActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.EventTypeListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.StoreOrderChooseTypeListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ErWeiMaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.DataCenterActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.QuikPayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.StoreCheckListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.AddPictrueActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/adpic_dialog_theme"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.SwipingNumActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.FindPwdActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.OnlineOrderCRUDActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.MemberInfoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.MyInfoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.OrderManagerActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.CantactsListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ProductManagerSearchActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.PrintActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.GroupModifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.MemberGroupActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.MyGroupChatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ChooseYunFeiMoBanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.LoginUserInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.CourierCodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.IncomeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.SexChooseActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.SelectExcutorActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.Checklogistics_web"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.GroupSelecPeopleActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.TeaTypeListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.TeaEventListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.SystemFunctionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.MsgSelectMemberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ShowGroupListPictrueActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.NewBuidEventActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.TimeRemindActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.MarketPreferenceDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ShowErWeiMaActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ProductReportoryActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.CommonWebViewActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.GlobalSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateVisible"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ConnactSearchListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateVisible"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.SignRecordsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.TeaSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustNothing"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.zxing.activity.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity
+            android:name=".activity.StorePayCodeInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.NewOrderManagerActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.StoreCheckDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.SendConfirmActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name=".activity.StorePayCodeInfoEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ChooseSingleMemberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.StoreCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 授权码 -->
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ShouQuanMaActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.AddStoreCheckActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.GiveProducSqmActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.ContactPhoneActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.NewSelectExcutorActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <!--活动收费方式-->
+        <activity
+            android:name="com.meetrend.haopingdian.activity.EventPayTypeListActivity"
+            android:screenOrientation="portrait"></activity>
+        <!--设置活动费用-->
+        <activity
+            android:name="com.meetrend.haopingdian.activity.SettingEventCostActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+
+        <activity
+            android:name="com.meetrend.haopingdian.activity.NewEventDetailActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.PayResultActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.meetrend.haopingdian.activity.WeiXinPayingActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize"></activity>
+
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+
+        <activity
+            android:name="com.meetrend.haopingdian.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"></service>
+    </application>
+
+
+</manifest>

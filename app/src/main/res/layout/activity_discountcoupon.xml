@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/three_widget_titlelayout" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7f7f7"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <com.meetrend.haopingdian.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null" />
+
+        <LinearLayout
+            android:id="@+id/empty_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/empty_textview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:hint="暂时没有要显示的数据\n点击屏幕可以刷新"
+                android:textColor="@color/gray_text" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

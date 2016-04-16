@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/window_bg_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <View style="@style/horizontal_no_margin_divider_style" />
+
+        <RelativeLayout
+            android:id="@+id/addlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/add_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/member_add" />
+
+            <TextView
+                android:id="@+id/tv_add_tea"
+                android:layout_width="wrap_content"
+                android:layout_height="60dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/add_icon"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="添加商品"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/big_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/horizontal_no_margin_divider_style" />
+
+</LinearLayout>

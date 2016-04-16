@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+     >
+   	  <LinearLayout style="@style/actionbar_style" android:layout_alignParentTop="true" android:id="@+id/bar">"
+        <include layout="@layout/include_actionbar" />
+    </LinearLayout>
+
+
+         <!-- 头像 -->
+	      <LinearLayout
+	          android:layout_height="fill_parent"
+	          android:layout_width="fill_parent"
+	            android:layout_below="@id/bar"
+	            android:background="@color/white"
+	           android:layout_margin="@dimen/margin_18"
+	           android:orientation="vertical"
+	          >
+        
+	            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/margin_18"
+                android:background="@color/white"
+                android:layout_height="wrap_content"
+                android:id="@+id/my_photo_lyt"
+                 >
+
+                <ImageView
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:scaleType="centerCrop"
+                    android:focusable="false"
+                    android:id="@+id/my_photo"
+                    android:src="@drawable/loading_default"
+                    />
+                 <TextView
+                     android:id="@+id/my_name"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:drawableRight="@drawable/right_arrow"
+                      android:textColor="@color/black_1"
+                     android:layout_marginLeft="@dimen/margin_20"
+                     android:text="我"
+                     android:focusable="false"
+                     android:textSize="@dimen/txt_20"
+                     />
+            </LinearLayout>
+            
+	             <ImageView
+	                android:layout_margin="@dimen/margin_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:focusable="false"
+                    android:id="@+id/store_code_pic"
+                    android:src="@drawable/loading_default"
+                    />
+	      </LinearLayout>
+	    
+
+          
+
+        <com.meetrend.haopingdian.widget.ProgressDialog
+            android:id="@+id/pd_member_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:clickable="true" />
+
+</RelativeLayout>

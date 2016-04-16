@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/two_widget_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/beizhu_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <View style="@style/horizontal_no_margin_divider_style" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/order_detail_item_height"
+            android:orientation="horizontal"
+            android:paddingLeft="14dip"
+            android:paddingRight="14dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="配送方式"
+                android:textColor="@color/text_small_black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/send_type_view"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical|right"
+                android:text="未设置"
+                android:textColor="@color/gray_text"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dip"
+                android:src="@drawable/right_arrow" />
+        </LinearLayout>
+
+        <View style="@style/horizontal_no_margin_divider_style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id = "@+id/kuaidilayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/order_detail_item_height"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:paddingLeft="14dip"
+        android:paddingRight="14dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="快递单号"
+            android:textColor="@color/text_small_black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/kuaidi_edit_view"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:hint="可录入快递单号"
+            android:textColor="@color/gray_text"
+            android:textCursorDrawable="@drawable/editcursor_bg"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:id = "@+id/bottomline"
+         style="@style/horizontal_no_margin_divider_style" />
+
+    <View
+        style="@style/horizontal_no_margin_divider_style"
+        android:layout_marginTop="20dip" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/order_detail_item_height"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:paddingLeft="14dip"
+        android:paddingRight="14dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="备注"
+            android:textColor="@color/text_small_black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/beizhu_edit_view"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:hint="可录入相关信息"
+            android:textColor="@color/gray_text"
+            android:textCursorDrawable="@drawable/editcursor_bg"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View style="@style/horizontal_no_margin_divider_style" />
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_marginLeft="14dip"
+        android:layout_marginRight="14dip"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/button_login_findpwd"
+        android:text="确  认"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/txt_18" />
+
+</LinearLayout>

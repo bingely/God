@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/phonedialog_bg" >
+
+    <TextView
+        android:id="@+id/phoneview"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="5dip"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:minHeight="60dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:textColor="#000000"
+        android:textSize="19sp" />
+
+    <View
+        android:id="@+id/topline"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/phoneview"
+        android:background="@color/listview_line_color"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_below="@id/topline"
+         android:background="@drawable/button_bottomleft_bottomright_bg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sure"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_bottomleft_bottomright_bg"
+            android:textColor="#2a89e4"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

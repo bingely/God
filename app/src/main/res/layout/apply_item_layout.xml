@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/relative_top"
+        android:layout_width="match_parent"
+        android:layout_height="70dip"
+        android:background="@drawable/list_item_bg"
+        android:gravity="center_vertical" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/apply_head_view"
+            android:layout_width="@dimen/new_event_detail_h_w"
+            android:layout_height="@dimen/new_event_detail_h_w"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/new_event_detail_paddingleft"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/loading_default"
+            fresco:retryImageScaleType="centerCrop"
+            fresco:roundAsCircle="false"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="5dp" />
+
+        <RelativeLayout
+            android:id="@+id/container_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/apply_head_view"
+            android:gravity="center_vertical" >
+
+            <LinearLayout
+                android:id="@+id/top_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/new_event_detail_margin_left"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/apply_name_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="王总"
+                        android:textColor="@color/green_text"
+                        android:textSize="@dimen/new_event_detail_big_size" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="5dip">
+
+                        <TextView
+                            android:id="@+id/is_evvent_need_paytext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/text_small_black"
+                            android:text="VIP坐席"
+                            android:textSize="@dimen/new_event_detail_big_size" />
+
+                        <TextView
+                            android:id="@+id/event_needpay_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:layout_marginLeft="5dip"
+                            android:text="¥300.00"
+                            android:textColor="@color/text_red"
+                            android:textSize="@dimen/new_event_detail_big_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/apply_time_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="15dip"
+                    android:textColor="@color/gray_text"
+                    android:text="刚刚"
+                    android:textSize="@dimen/new_event_detail_small_size" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/connect_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_top"
+        android:background="#eeeeee"
+        android:orientation="vertical"
+         >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/listview_line_color" />
+
+        <TextView
+            android:id="@+id/apply_phone_view"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_marginTop="5dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/new_event_detail_paddingleft"
+            android:text="手机：1561456895"
+            android:textColor="@color/text_small_black"
+            android:textSize="@dimen/new_event_detail_big_size" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.2px"
+            android:background="@color/listview_line_color" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:orientation="horizontal"
+             android:background="#eeeeee">
+
+            <RelativeLayout
+                android:id="@+id/call_layout_view"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tab_prise_item_connact_bg"
+                android:gravity="center" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/call" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:text="打电话"
+                        android:textColor="@color/green_text"
+                        android:textSize="@dimen/new_event_detail_big_size" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1.2px"
+                android:layout_height="30dip"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/listview_line_color" />
+
+            <RelativeLayout
+                android:id="@+id/msg_layout_view"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                 android:background="@drawable/tab_prise_item_connact_bg" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/message" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:text="发短信"
+                        android:textColor="@color/green_text"
+                        android:textSize="@dimen/new_event_detail_big_size" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

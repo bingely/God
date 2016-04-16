@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:fitsSystemWindows="true">
+
+    <LinearLayout style="@style/actionbar_style" >
+
+     <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/actionbar_home"
+        style="@style/actionbar_home_style" />
+
+    <TextView
+        android:id="@+id/actionbar_title"
+        style="@style/actionbar_title_style" />
+
+    <TextView
+        android:id="@+id/actionbar_action"
+        style="@style/actionbar_action_style" />
+
+</RelativeLayout>
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/my_webview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        />
+    
+     <com.meetrend.haopingdian.widget.ProgressDialog
+            android:id="@+id/pd_member_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:clickable="true" />
+
+</LinearLayout>

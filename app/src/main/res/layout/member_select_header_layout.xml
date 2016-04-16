@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/all_search_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/global_header_height" >
+
+    <FrameLayout
+        android:id="@+id/layout_contact_phone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#e2e2e2" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="7dip"
+            android:layout_marginLeft="14dip"
+            android:layout_marginRight="14dip"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/ic_search_api_holo_light"
+                android:drawablePadding="2dip"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:text="搜索"
+                android:textColor="#a6a6a6"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <SearchView
+        android:id="@+id/search_contact_phone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:queryHint="输入关键字"
+        android:visibility="invisible" />
+
+</FrameLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f7f7f7"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/bar"
+        style="@style/actionbar_style" >
+
+        <include layout="@layout/include_actionbar" />
+    </LinearLayout>
+
+    <!--<FrameLayout
+        android:id="@+id/searchlayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#e2e2e2" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="7dip"
+            android:layout_marginLeft="14dip"
+            android:layout_marginRight="14dip"
+            android:layout_marginTop="7dip"
+            android:background="@drawable/bg_white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/icon_search"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:text="搜索" />
+        </RelativeLayout>
+    </FrameLayout>-->
+
+    <include layout="@layout/head_search_layout" />
+
+    <ExpandableListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="#f7f7f7"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/black_line_color"
+        android:dividerHeight="1.1px"
+        android:groupIndicator="@null"
+        android:overScrollMode="never" />
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    android:background="@drawable/list_item_bg">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/listview_line_color"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="72dip"
+        android:gravity="center_vertical"
+        android:paddingLeft="17dip"
+        android:paddingRight="17dip">
+
+        <ImageView
+            android:id = "@+id/left_icon"
+            android:layout_width="39dip"
+            android:layout_height="39dip"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_red_tiaoma"/>
+
+        <LinearLayout
+            android:layout_toRightOf="@+id/left_icon"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="5dip"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id = "@+id/paycodenameview"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="14sp"
+                android:textColor="@color/txt_black_color"
+                android:text="店内活动收费"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id = "@+id/paycode_money"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="23sp"
+                android:textColor="@color/txt_red_color"
+                android:text="¥100"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_big_height"
+        android:background="@color/listview_line_color"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:background="#f7f7f7"
+        android:layout_height="18dip"/>
+
+</LinearLayout>

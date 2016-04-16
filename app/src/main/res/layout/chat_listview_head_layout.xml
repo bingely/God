@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#f7f7f7"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id = "@+id/chat_listview_header_process"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:background="#f7f7f7"
+        android:orientation="vertical" >
+
+        <com.meetrend.haopingdian.widget.ProgressWheel
+            xmlns:wheel="http://schemas.android.com/apk/res-auto"
+            style="@android:style/Widget.ProgressBar.Small"
+            android:layout_width="16dip"
+            android:layout_height="16dip"
+            android:layout_centerInParent="true"
+            wheel:matProg_barColor="#ff0000"
+            wheel:matProg_barWidth="1.3dip"
+            wheel:matProg_progressIndeterminate="true" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

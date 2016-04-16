@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:orientation="vertical" >
+
+    <include layout="@layout/two_widget_title_layout" />
+
+    <com.meetrend.haopingdian.util.BounceScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/fragment_login_x"
+                    android:layout_width="70dip"
+                    android:layout_height="70dip"
+                    android:layout_marginTop="30dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/about_logo" />
+
+                <TextView
+                    android:id="@+id/versionnameview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginTop="11dip"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/gray_text"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <LinearLayout
+                android:id="@+id/app_detail"
+                style="@style/setting_me_layout_style"
+                android:background="@drawable/list_item_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/me_info_style"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:text="功能介绍" />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginLeft="20dip" />
+
+            <!-- phone -->
+
+            <LinearLayout
+                android:id="@+id/sys_notify"
+                style="@style/setting_me_layout_style"
+                android:background="@drawable/list_item_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/me_info_style"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:text="系统通知" />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginLeft="20dip" />
+
+            <!-- 帮助与反馈 -->
+
+            <LinearLayout
+                android:id="@+id/feedback"
+                style="@style/setting_me_layout_style"
+                android:background="@drawable/list_item_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/me_info_style"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:text="意见反馈 " />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginLeft="20dip" />
+
+            <!-- 升级公告 -->
+
+            <LinearLayout
+                android:id="@+id/update_tell"
+                style="@style/setting_me_layout_style"
+                android:background="@drawable/list_item_bg"
+                android:orientation="horizontal" >
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <TextView
+                        style="@style/me_info_style"
+                        android:layout_width="fill_parent"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:text="升级公告" />
+
+                    <ImageView
+                        android:id="@+id/update_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|top"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="12dip"
+                        android:src="@drawable/update_red_circle_icon" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginLeft="20dip" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    style="@style/setting_me_layout_style"
+                    android:background="@drawable/list_item_bg"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/me_info_style"
+                        android:layout_weight="1"
+                        android:text="版本更新" />
+
+                    <TextView
+                        android:id="@+id/version_name"
+                        style="@style/me_info_style"
+                        android:layout_weight="2"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:textColor="@color/gray_text" />
+                </LinearLayout>
+
+                <View style="@style/horizontal_no_margin_divider_style" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.meetrend.haopingdian.util.BounceScrollView>
+
+</LinearLayout>

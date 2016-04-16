@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <com.meetrend.haopingdian.widget.SideBar
+         xmlns:sidebar="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/alphat_layout"
+        android:layout_width="23dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:alpha="0.5"
+        android:visibility="gone"
+        sidebar:isshowmorealphat = "false"/>
+
+    <TextView
+        android:id="@+id/tv_alphabet_ui_tableview"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/alpat_dialog_tv_bg"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="40sp"
+        android:visibility="gone" />
+
+</merge>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_bg"
+    android:orientation="horizontal"
+    android:paddingRight="10dip" 
+    android:id = "@+id/item_layout">
+
+    <ImageView
+        android:id="@+id/store_check_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/check_off" />
+
+    <TextView
+        android:id="@+id/tv_store_name"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/txt_18" />
+
+</RelativeLayout>

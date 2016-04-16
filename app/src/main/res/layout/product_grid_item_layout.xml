@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="75dip"
+        android:layout_height="75dip"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/grid_item_pic"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/loading_default"
+                fresco:placeholderImageScaleType="fitXY"
+                fresco:retryImageScaleType="centerCrop"
+                fresco:roundAsCircle="false"
+                fresco:roundBottomLeft="true"
+                fresco:roundBottomRight="true"
+                fresco:roundTopLeft="true"
+                fresco:roundTopRight="true" />
+
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="fill_parent"
+                android:layout_height="22dip"
+                android:layout_gravity="bottom"
+                android:alpha="0.9"
+                android:background="#000000"
+                android:gravity="center"
+                android:text="细节图"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/delimg"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_gravity="top|right"
+            android:src="@drawable/p_del" />
+    </FrameLayout>
+
+</FrameLayout>

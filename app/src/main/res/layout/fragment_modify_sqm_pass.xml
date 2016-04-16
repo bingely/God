@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#f7f7f7"
+              android:orientation="vertical">
+
+    <include layout="@layout/two_widget_title_layout"/>
+
+    <View
+        style="@style/horizontal_no_margin_divider_style"
+        android:layout_marginTop="20dip"/>
+
+    <LinearLayout
+        android:id="@+id/new_pass_layout"
+        style="@style/setting_me_layout_style"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/me_info_style"
+            android:text="旧密码"
+            android:layout_width="70dip"
+            android:gravity="left|center_vertical"/>
+
+        <EditText
+            android:id="@+id/old_sqm_pass_edit"
+            style="@style/me_info_style"
+            android:background="@null"
+            android:digits="@string/need_chars"
+            android:gravity="left|center_vertical"
+            android:hint="请输入新密码"
+            android:maxLength="20"
+            android:password="true"
+            android:layout_width="fill_parent"
+            android:singleLine="true"
+            android:textColorHint="#797979"
+            android:paddingLeft="@dimen/margin_dis_15"
+            android:textCursorDrawable="@drawable/editcursor_bg"/>
+    </LinearLayout>
+
+    <View style="@style/horizontal_no_margin_divider_style"/>
+
+    <LinearLayout
+        android:id="@+id/layout_forget_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_18"
+        android:layout_marginTop="@dimen/margin_18"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!-- 新密码 -->
+
+        <View style="@style/horizontal_no_margin_divider_style"/>
+
+        <LinearLayout
+            style="@style/setting_me_layout_style"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/me_info_style"
+                android:layout_width="70dip"
+                android:text="@string/title_new_pwd"
+                android:gravity="left|center_vertical"/>
+
+            <EditText
+                android:id="@+id/new_sqm_pass"
+                style="@style/me_info_style"
+                android:background="@null"
+                android:layout_width="fill_parent"
+                android:digits="@string/need_chars"
+                android:gravity="left|center_vertical"
+                android:hint="请输入新密码"
+                android:maxLength="20"
+                android:password="true"
+                android:paddingLeft="@dimen/margin_dis_15"
+                android:singleLine="true"
+                android:textColorHint="#797979"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dip"
+            android:background="#dfe3e6"/>
+
+        <!-- 确认新密码 -->
+
+        <LinearLayout
+            style="@style/setting_me_layout_style"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/me_info_style"
+                android:layout_width="70dip"
+                android:text="@string/title_confim_pwd"
+                android:gravity="left|center_vertical"/>
+
+            <EditText
+                android:id="@+id/confim_sqm_pwd"
+                style="@style/me_info_style"
+                android:layout_width="fill_parent"
+                android:background="@null"
+                android:digits="@string/need_chars"
+                android:gravity="left|center_vertical"
+                android:hint="@string/hint_confim_pwd"
+                android:paddingLeft="@dimen/margin_dis_15"
+                android:maxLength="20"
+                android:password="true"
+                android:singleLine="true"
+                android:textColorHint="#797979"/>
+        </LinearLayout>
+
+        <View style="@style/horizontal_no_margin_divider_style"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_sqm_pwd_ok"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_margin="@dimen/margin_20"
+        android:background="@drawable/button_red"
+        android:gravity="center"
+        android:text="确 认"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_18"/>
+
+</LinearLayout>

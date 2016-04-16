@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="load_fail_str">数据加载失败</string>
+    <string name="load_pic_fail">获取本地图片路径失败</string>
+    <string name="pic_update_fail">图片上传失败</string>
+    <string name="pic_update_success">图片上传成功</string>
+    <string name="pic_load_fail">图片加载失败</string>
+    <string name="net_has_problem">网络异常</string>
+    <string name="money_char">¥</string>
+    <string name="title_finish_hint">完成</string>
+    <string name="no_search_list">没有搜索结果</string>
+
+
+    <string name="app_name">好评店</string>
+    <string name="dayi_app_name">好评店</string>
+    <string name="str_user_name">用户名</string>
+    <string name="str_user_pwd">密码</string>
+    <string name="str_forgot_pwd">忘记密码?</string>
+    <string name="str_reset_pwd">重置密码</string>
+    <string name="str_login">登  录</string>
+    <string name="str_empty_name">用户名不能为空</string>
+    <string name="str_empty_pwd">密码不能为空</string>
+    <string name="str_next">下 一 步</string>
+    <string name="str_input_account">请输入你的账号</string>
+    <string name="str_findpwd_prompt">为了验证身份，我们将会发送短信验证码</string>
+    <string name="str_empty_phonenumber">请输入你的登录名</string>
+    <string name="str_err_format_phonenumber">电话格式不正确</string>
+    <string name="str_cancel">取消</string>
+    <string name="str_agree">确认</string>
+    <string name="str_message">消息</string>
+    <string name="str_contact">通讯录</string>
+    <string name="str_order">订单</string>
+    <string name="str_manage">管理</string>
+    <string name="str_inventory">库存</string>
+    <string name="str_order_number">订单编号:</string>
+    <string name="str_order_create_time">下单时间:</string>
+    <string name="str_order_name">下单人:</string>
+    <string name="str_order_executor">执行人:</string>
+    <string name="str_order_amount">数量:</string>
+    <string name="str_order_total_price">总价:</string>
+    <string name="str_invite">手动邀请客户</string>
+    <string name="str_import_contact">从手机通讯录导入</string>
+    <string name="str_add_member">添加会员</string>
+    <string name="str_save">保存</string>
+    <string name="str_name">姓名</string>
+    <string name="str_input_member_name">请输入名字</string>
+    <string name="str_gender">性别</string>
+    <string name="str_age">年龄段</string>
+    <string name="str_please_choose">请选择</string>
+    <string name="str_choose_age">选择年龄段</string>
+    <string name="str_please_choose_age">请选择年龄段</string>
+    <string name="str_cellphone_number">手机号码</string>
+    <string name="str_not_allow_empty_phone_number">手机号码不能为空</string>
+    <string name="str_please_input_phone">请输入手机号</string>
+    <string name="str_please_input_email">请输入邮箱地址</string>
+    <string name="str_email">邮箱</string>
+    <string name="str_remark">备注</string>
+    <string name="unknow">未知</string>
+    <string name="str_title_setting">我</string>
+    <string name="myinfo">个人信息</string>
+    <string name="store_code">门店二维码</string>
+    <string name="about">关于我们</string>
+    <string name="pwd_modify">密码修改</string>
+    <string name="modify">编辑</string>
+    <string name="modify_info">编辑信息</string>
+    <string name="done">完成</string>
+    <string name="title_account">当前账号</string>
+    <string name="title_old_pwd">旧密码</string>
+    <string name="title_new_pwd">新密码</string>
+    <string name="title_confim_pwd">确认密码</string>
+    <string name="title_function_detail">功能介绍</string>
+    <string name="title_sys_notify">系统通知</string>
+    <string name="title_feedback">意见反馈</string>
+    <string name="title_feedback_content">问题和意见</string>
+    <string name="title_group">分组</string>
+    <string name="title_created">创建</string>
+    <string name="title_group_name">组名称</string>
+    <string name="title_group_member">组成员</string>
+    <string name="title_create_group">创建分组</string>
+    <string name="title_modify_group">编辑分组</string>
+    <string name="title_send_group_msg">群发消息(%1$s)</string>
+    <string name="title_store_place_order">店内下单</string>
+    <string name="all_select">全选</string>
+    <string name="all_cancel">全消</string>
+    <string name="hint_old_pwd">请输入原登录密码</string>
+    <string name="hint_new_pwd">请输入新的登录密码</string>
+    <string name="hint_confim_pwd">请再次确认新的密码</string>
+    <string name="hint_gourp_name">请输入组名称</string>
+    <string name="hint_required">必填</string>
+    <string name="hint_unrequired">选填</string>
+    <string name="toast_old_pwd_empty">请填写原登录密码</string>
+    <string name="toast_new_pwd_empty">请填写新登录密码</string>
+    <string name="toast_confim_pwd_empty">请填写确认密码</string>
+    <string name="toast_newpwd_confimpwd_no_same">新密码和确认密码不一致</string>
+    <string name="error_control_is_null">控件未初始化</string>
+    <string name="error_is_empty">%1$s不能为空</string>
+    <string name="error_less_length">%1$s长度不能小于%2$s</string>
+    <string name="error_more_length">%1$s长度不能大于于%2$s</string>
+    <string name="str_listview_empty">无数据</string>
+    <string name="confim_modify">确认修改</string>
+    <string name="feedback_content_isnull">请填写反馈内容</string>
+    <string name="submit">提  交</string>
+    <string name="feedback_detail">您好,这里是反馈中心,感谢您对大益CRM的关注,请提出宝贵的建议和意见</string>
+    <string name="from_contacts">从通讯录选择</string>
+    <string name="str_account">登录名</string>
+    <string name="str_input_accout">请输入用户名</string>
+    <string name="str_captcha">验证码</string>
+    <string name="str_input_captcha">请输入验证码</string>
+    <string name="str_send_captcha">发送验证码</string>
+    <string name="assistant">店小二</string>
+
+    <string-array name="age_name">
+        <item>20岁以下</item>
+        <item>20岁-29岁</item>
+        <item>30岁-39岁</item>
+        <item>40岁-45岁</item>
+        <item>46岁-50岁</item>
+        <item>51岁-55岁</item>
+        <item>56岁-60岁</item>
+        <item>61岁-65岁</item>
+        <item>66岁-70岁</item>
+        <item>70岁以上</item>
+    </string-array>
+
+    <string-array name="search_titles">
+        <item>库存</item>
+        <item>会员</item>
+        <item>聊天记录</item>
+    </string-array>
+    <string-array name="income_titles">
+        <item>月度</item>
+        <item>季度</item>
+        <item>年度</item>
+    </string-array>
+
+    <!-- swipeListView  header -->
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">松开可以刷新</string>
+    <string name="lastUpdateTime">最近更新：%s</string>
+    <string name="swipe_load_full">已加载全部</string>
+    <string name="no_data">暂无数据</string>
+    <string name="more">加载中</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="loading_text"></string>
+    <string name="shouquanma_text">授权码</string>
+    <string name="today_shouquanma_text">今日授权码</string>
+    <string name="re_create_text">重新生成</string>
+
+    <!-- 登录 -->
+    <string name="business_num_not_empty">请输入商户号</string>
+    <string name="scan_points_youhui">点一点扫取积分优惠</string>
+    <string name="odermanager_name">订单管理</string>
+    <string name="weizhi">未知</string>
+    <string name="order_manager_title">订单管理</string>
+    <!--正式-->
+    <string name="appID">wx96acf5559be930d2</string>
+    <string name="appSecret">d4624c36b6795d1d99dcf0547af5443d</string>
+    <!--测试-->
+    <string name="appID2">wxd32edb70037da34e</string>
+    <string name="appSecret2">5e6f8cc449b7e7fc36088f4f27bf5631</string>
+
+
+
+    <string name="btn_normal_txt">按住 说话</string>
+    <string name="btn_cancel_txt">松开结束本次录音</string>
+    <string name="btn_cancel_recording">松开手指，取消录音</string>
+    <string name="btn_finish_recording">松开手指，结束录音</string>
+
+    <string name="label_recording_txt">手指上滑，取消发送</string>
+
+    <string name="title_balancepay_txt">余额支付</string>
+
+    <string name="store_get_money_top_hint">欢迎使用好评店付款</string>
+    <string name="store_get_money_top2_hint">老茧良品（南新店）</string>
+    <string name="store_bottom1_hint">扫一扫上面的二维码图案，想我付款</string>
+    <string name="store_bottom2_hint">（同时支持微信，支付宝支付）</string>
+    <string name="store_title">门店收款码</string>
+    <string name="editview_text">编辑</string>
+
+    <string name="head_text">头像</string>
+    <string name="beizhu_text">备注</string>
+    <string name="name_hint">名称</string>
+    <string name="money_hint">金额</string>
+
+    <string name="need_chars">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+
+</resources>

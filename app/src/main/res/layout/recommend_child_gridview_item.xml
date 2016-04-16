@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:orientation="vertical" 
+>
+
+    <FrameLayout
+        android:id="@+id/topLayout"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_gravity="center_vertical" >
+
+        <com.meetrend.haopingdian.widget.RoundImageView
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/child_img"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+            app:roundWidth="@dimen/round_radius"
+			app:roundHeight="@dimen/round_radius" />
+
+        <ImageView
+            android:id="@+id/child_check_off_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:src="@drawable/check_on" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/child_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="肖建斌"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+</LinearLayout>

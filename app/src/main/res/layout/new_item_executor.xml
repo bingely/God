@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/margin_18"
+    android:paddingRight="@dimen/margin_18" >
+
+    <ImageView
+        android:id="@+id/select_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:focusable="false"
+        android:src="@drawable/check_off" />
+
+   <!--  <com.meetrend.haopingdian.widget.RoundImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/iv_executor_avatar"
+        android:layout_width="@dimen/global_list_image_size"
+        android:layout_height="@dimen/global_list_image_size"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="12dp"
+        android:layout_marginLeft="7dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/loading_default"
+        app:roundHeight="@dimen/round_radius"
+        app:roundWidth="@dimen/round_radius" /> -->
+    
+      <com.facebook.drawee.view.SimpleDraweeView
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/iv_executor_avatar"
+        android:layout_width="@dimen/global_list_image_size"
+        android:layout_height="@dimen/global_list_image_size"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="12dp"
+        android:layout_marginLeft="7dp"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/loading_default"
+        fresco:retryImageScaleType="centerCrop"
+        fresco:roundAsCircle="false"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundedCornerRadius="5dp" />
+
+    <TextView
+        android:id="@+id/tv_executorr_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="你好"
+        android:textColor="@color/text_small_black"
+        android:textSize="16sp" />
+
+</LinearLayout>

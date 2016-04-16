@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <com.meetrend.haopingdian.widget.RoundImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/iv_message_photo"
+        style="@style/list_image_style"
+        android:scaleType="centerCrop"
+        app:roundHeight="@dimen/round_radius"
+        app:roundWidth="@dimen/round_radius" />
+
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_margin="@dimen/global_margin"
+        android:layout_weight="1"
+        android:stretchColumns="0" >
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tv_message_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#111111"
+                android:textSize="@dimen/message_list_name_textsize" />
+
+            <TextView
+                android:id="@+id/tv_message_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#aaaaaa"
+                android:textSize="@dimen/message_list_context_textsize" />
+        </TableRow>
+
+        <com.meetrend.haopingdian.widget.FaceiconTextView
+            android:id="@+id/tv_message_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#555555"
+            android:textSize="@dimen/message_list_context_textsize" />
+    </TableLayout>
+
+</LinearLayout>

@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/two_widget_title_layout" />
+
+    <com.meetrend.haopingdian.util.BounceScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="40dip" >
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginTop="15dip" />
+
+            <RelativeLayout
+                android:id="@+id/add_tea_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="71dip"
+                android:background="@drawable/list_item_bg"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/detail_add_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/detail_add" />
+            </RelativeLayout>
+
+            <!-- 只选择了单个茶品 -->
+
+            <LinearLayout
+                android:id="@+id/one_product_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="71dip"
+                android:background="@drawable/list_item_bg"
+                android:orientation="horizontal"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/tea_imgview"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/loading_failed" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tea_name_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="鸿运袁查"
+                        android:textColor="@color/text_small_black"
+                        android:textSize="@dimen/order_tea_txtsize" />
+
+                    <TextView
+                        android:id="@+id/tea_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:singleLine="true"
+                        android:text="单价：1025元"
+                        android:textColor="@color/text_small_black"
+                        android:textSize="@dimen/order_tea_txtsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginLeft="20dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tea_num_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="数量：1.0"
+                        android:textColor="@color/text_small_black"
+                        android:textSize="@dimen/order_tea_txtsize" />
+
+                    <TextView
+                        android:id="@+id/tea_total_price_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="总价：16元"
+                        android:textColor="@color/text_small_black"
+                        android:textSize="@dimen/order_tea_txtsize" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+            <!-- 选择了多个茶产品 -->
+
+            <RelativeLayout
+                android:id="@+id/more_product_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_item_bg"
+                android:gravity="center_vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/more_product_img_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="71dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dip" >
+
+                    <ImageView
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/loading_failed"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_marginLeft="10dip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/loading_failed"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_marginLeft="10dip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/loading_failed"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/more_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dip"
+                    android:layout_toRightOf="@id/more_product_img_layout"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/more_view_icon" />
+
+                <TextView
+                    android:id="@+id/product_count_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:drawablePadding="3dip"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:paddingRight="@dimen/order_tea_margin"
+                    android:textColor="@color/text_small_black"
+                    android:textSize="@dimen/order_tea_txtsize" />
+            </RelativeLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <!-- 执行人 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    style="@style/horizontal_no_margin_divider_style"
+                    android:layout_marginTop="15dip" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="#ffffff"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/order_tea_margin"
+                    android:paddingRight="@dimen/order_tea_margin" >
+
+                    <TextView
+                        style="@style/order_tea_detail_text_style"
+                        android:gravity="center_vertical"
+                        android:text="客户" />
+
+                    <EditText
+                        android:id="@+id/customer_name_edit"
+                        style="@style/order_tea_detail_text_style"
+                        android:layout_width="0dip"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="15dip"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:hint="@string/scan_points_youhui"
+                        android:paddingLeft="20dip"
+                        android:singleLine="true"
+                        android:textColor="#bebebe"
+                        android:textCursorDrawable="@drawable/editcursor_bg" />
+
+                    <ImageView
+                        android:id="@+id/scan_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/scan_icon" />
+                </LinearLayout>
+
+                <View
+                    style="@style/horizontal_no_margin_divider_style"
+                    android:layout_marginLeft="15dip" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="#ffffff"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/order_tea_margin"
+                    android:paddingRight="@dimen/order_tea_margin" >
+
+                    <TextView
+                        style="@style/order_tea_detail_text_style"
+                        android:gravity="center_vertical"
+                        android:text="手机" />
+
+                    <EditText
+                        android:id="@+id/customer_phone_edit"
+                        style="@style/order_tea_detail_text_style"
+                        android:layout_width="0dip"
+                        android:layout_marginLeft="15dip"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:digits="0123456789"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:paddingLeft="20dip"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_text"
+                        android:textCursorDrawable="@drawable/editcursor_bg" />
+                </LinearLayout>
+
+                <View style="@style/horizontal_no_margin_divider_style" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <View
+                        style="@style/horizontal_no_margin_divider_style"
+                        android:layout_marginTop="@dimen/order_tea_margin" />
+
+                    <!-- 积分 -->
+                    <LinearLayout
+                        android:id="@+id/jifen_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <LinearLayout
+                            android:id="@+id/choose_point_discount_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dip"
+                            android:background="#ffffff"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/order_tea_margin"
+                            android:paddingRight="@dimen/order_tea_margin" >
+
+                            <TextView
+                                style="@style/order_tea_detail_text_style"
+                                android:gravity="center_vertical"
+                                android:text="优惠券" />
+
+                            <TextView
+                                android:id="@+id/choose_jifen_quan_view"
+                                style="@style/order_tea_detail_text_style"
+                                android:layout_width="0dip"
+                                android:layout_marginLeft="15dip"
+                                android:layout_marginRight="15dip"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:text="选择优惠券"
+                                android:gravity="center_vertical|right"
+                                android:paddingLeft="20dip"
+                                android:singleLine="true"
+                                android:textColor="@color/gray_text" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/right_arrow" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/horizontal_no_margin_divider_style"
+                            android:layout_marginLeft="@dimen/order_tea_margin" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dip"
+                            android:background="#ffffff"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/order_tea_margin"
+                            android:paddingRight="@dimen/order_tea_margin" >
+
+                            <TextView
+                                style="@style/order_tea_detail_text_style"
+                                android:gravity="center_vertical"
+                                android:text="积分" />
+
+                            <EditText
+                                android:id="@+id/jifen_edit"
+                                style="@style/order_tea_detail_text_style"
+                                android:layout_width="0dip"
+                                android:layout_marginLeft="30dip"
+                                android:layout_marginRight="15dip"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="right|center_vertical"
+                                android:hint="请输入积分"
+                                android:inputType="number"
+                                android:digits="0123456789"
+                                android:paddingLeft="10dip"
+                                android:textColor="#bebebe"
+                                android:textCursorDrawable="@drawable/editcursor_bg" />
+                        </LinearLayout>
+
+                        <View style="@style/horizontal_no_margin_divider_style" />
+
+                        <TextView
+                            android:id="@+id/can_use_points"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dip"
+                            android:background="#f7f7f7"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dip"
+                            android:text="可用积分0"
+                            android:textColor="@color/gray_text" />
+
+                        <View style="@style/horizontal_no_margin_divider_style" />
+                    </LinearLayout>
+
+                    <!-- 配送方式 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dip"
+                        android:background="@drawable/list_item_bg"
+                        android:clickable="true"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/order_tea_margin"
+                        android:paddingRight="@dimen/order_tea_margin" >
+
+                        <TextView
+                            style="@style/order_tea_detail_text_style"
+                            android:gravity="center_vertical"
+                            android:text="配送方式" />
+
+                        <TextView
+                            android:id="@+id/peisong_type_view"
+                            style="@style/order_tea_detail_text_style"
+                            android:layout_width="0dip"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:paddingLeft="20dip"
+                            android:singleLine="true"
+                            android:textColorHint="@color/gray_text"
+                            android:hint="请选择配送方式"
+                            android:textColor="@color/gray_text" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/right_arrow" />
+                    </LinearLayout>
+
+                    <View style="@style/horizontal_no_margin_divider_style" />
+
+                    <LinearLayout
+                        android:id="@+id/kuaidi_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/order_tea_margin"
+                        android:paddingRight="@dimen/order_tea_margin"
+                        android:visibility="gone" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dip"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/order_tea_detail_text_style"
+                                android:gravity="center_vertical"
+                                android:text="执行人" />
+
+                            <TextView
+                                android:id="@+id/dianxiaoer_name_edit"
+                                style="@style/order_tea_detail_text_style"
+                                android:layout_width="0dip"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="20dip"
+                                android:text="请选择"
+                                android:textColor="@color/gray_text" />
+
+                            <TextView
+                                android:id="@+id/choose_dianxiaoer_view"
+                                style="@style/order_tea_detail_text_style"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:text="选择执行人"
+                                android:textColor="@color/green_text" />
+                        </LinearLayout>
+
+                        <View style="@style/horizontal_no_margin_divider_style" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dip"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/order_tea_detail_text_style"
+                                android:gravity="center_vertical"
+                                android:text="地址" />
+
+                            <EditText
+                                android:id="@+id/address_edit"
+                                style="@style/order_tea_detail_text_style"
+                                android:layout_width="0dip"
+                                android:layout_marginLeft="15dip"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="left|center_vertical"
+                                android:hint="请填写收货地址"
+                                android:paddingLeft="20dip"
+                                android:singleLine="true"
+                                android:textColor="@color/gray_text"
+                                android:textCursorDrawable="@drawable/editcursor_bg" />
+                        </LinearLayout>
+
+                        <View style="@style/horizontal_no_margin_divider_style" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 支付方式 -->
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginTop="@dimen/order_tea_margin" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:background="@drawable/list_item_bg"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/order_tea_margin"
+                android:paddingRight="@dimen/order_tea_margin" >
+
+                <TextView
+                    style="@style/order_tea_detail_text_style"
+                    android:gravity="center_vertical"
+                    android:text="支付方式" />
+
+                <TextView
+                    android:id="@+id/pay_type_view"
+                    style="@style/order_tea_detail_text_style"
+                    android:layout_width="0dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="20dip"
+                    android:singleLine="true"
+                    android:textColorHint="@color/gray_text"
+                    android:hint="请选择支付方式"
+                    android:textColor="@color/gray_text" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <!-- 备注 -->
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginTop="@dimen/order_tea_margin" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/order_tea_margin"
+                android:paddingRight="@dimen/order_tea_margin" >
+
+                <TextView
+                    style="@style/order_tea_detail_text_style"
+                    android:gravity="center_vertical"
+                    android:text="备注" />
+
+                <EditText
+                    android:id="@+id/beizhu_edit"
+                    style="@style/order_tea_detail_text_style"
+                    android:layout_width="0dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:hint="选填"
+                    android:paddingLeft="20dip"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_text"
+                    android:textCursorDrawable="@drawable/editcursor_bg" />
+            </LinearLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginTop="@dimen/order_tea_margin" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/order_tea_margin"
+                android:paddingRight="@dimen/order_tea_margin" >
+
+                <TextView
+                    style="@style/order_tea_detail_text_style"
+                    android:gravity="center_vertical"
+                    android:text="合计" />
+
+                <TextView
+                    android:id="@+id/all_products_money_view"
+                    style="@style/order_tea_detail_text_style"
+                    android:layout_width="0dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:paddingLeft="20dip"
+                    android:singleLine="true"
+                    android:text="0.0"
+                    android:textColor="@color/green_text" />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginLeft="@dimen/order_tea_margin" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/order_tea_margin"
+                android:paddingRight="@dimen/order_tea_margin" >
+
+                <TextView
+                    style="@style/order_tea_detail_text_style"
+                    android:gravity="center_vertical"
+                    android:text="应收" />
+
+                <com.meetrend.haopingdian.widget.GiveMoneyEditView
+                    android:id="@+id/detail_all_products_give_money_view"
+                    style="@style/order_tea_detail_text_style"
+                    android:layout_width="0dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="0123456789."
+                    android:gravity="right|center_vertical"
+                    android:inputType="number"
+                    android:paddingLeft="20dip"
+                    android:singleLine="true"
+                    android:text="0.0"
+                    android:textColor="@color/green_text"
+                    android:textColorHint="@color/green_text"
+                    android:textCursorDrawable="@drawable/editcursor_bg" />
+
+                <ImageView
+                    android:id="@+id/right_arrow_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+        </LinearLayout>
+    </com.meetrend.haopingdian.util.BounceScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/detail_bottom_should_givew_money_view"
+            android:layout_width="0dip"
+            android:layout_height="60dip"
+            android:layout_weight="1"
+            android:background="#e9e9eb"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLength="20"
+            android:paddingLeft="16dip"
+            android:singleLine="true"
+            android:text="应收：¥ 0.0"
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/confirm_order"
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:background="@drawable/pay_btn_bg"
+            android:gravity="center"
+            android:padding="16dip"
+            android:singleLine="true"
+            android:text="结 账"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18" />
+    </LinearLayout>
+
+</LinearLayout>

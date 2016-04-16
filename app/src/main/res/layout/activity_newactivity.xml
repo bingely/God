@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true" >
+
+    <LinearLayout style="@style/actionbar_style" >
+
+        <include layout="@layout/include_actionbar" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                android:text="活动名称"
+                android:textSize="@dimen/txt_18"
+                android:textColor="@color/black_1" />
+
+            <com.meetrend.haopingdian.widget.MyEditText
+                android:id="@+id/et_activity_name"
+                style="@style/me_activity_style"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:hint="请输入活动名称"
+                android:textColorHint="#c3c3c3"
+                android:textColor="#797979"
+                android:maxLength="20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                android:text="活动正文"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/txt_18" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <com.meetrend.haopingdian.widget.MyEditText
+                    android:id="@+id/et_activity_content"
+                    style="@style/me_activity_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="150dip"
+                    android:hint="请输入活动内容"
+                    android:textColorHint="#c3c3c3"
+                    android:textColor="#797979"
+                    android:maxLength="100" />
+
+                <!-- <ImageView
+                    android:id="@+id/img_newactivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/margin_20"
+                    android:src="@drawable/feedbackimg" /> -->
+                <com.meetrend.haopingdian.widget.GridView
+                    android:id="@+id/img_newactivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:columnWidth="60dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="auto_fit"
+                    android:padding="10dp"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                android:text="活动时间"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/txt_18" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/white" 
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:id="@+id/et_activity_inputDate"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:hint="开始时间"
+                    android:textSize="@dimen/txt_18"
+                    android:textColorHint="#c3c3c3"
+                    android:textColor="#797979"
+                    android:inputType="none"
+                    android:padding="5dp"
+                    android:background="@drawable/filename"
+                    android:layout_marginLeft="20dp"/>
+                
+                <View 
+                    android:layout_width="30dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/gray"
+                    android:layout_margin="5dp"
+                    />
+                
+                <TextView 
+                    android:id="@+id/et_activity_inputDate2"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:hint="结束时间"
+                    android:textColorHint="#c3c3c3"
+                    android:textColor="#797979"
+                    android:textSize="@dimen/txt_18"
+                    android:padding="5dp"
+                    android:background="@drawable/filename"
+                    android:layout_marginRight="20dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                android:text="报名截止时间"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/txt_18" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/white" 
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:id="@+id/et_activity_endDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:hint="请输入报名截止时间"
+                    android:textSize="@dimen/txt_18"
+                    android:textColorHint="#c3c3c3"
+                    android:textColor="#797979"
+                    android:inputType="none"
+                    android:padding="5dp"
+                    android:background="@drawable/filename"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+                
+            </LinearLayout>
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                android:text="活动详情"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/txt_18" />
+
+            <EditText
+                android:id="@+id/et_activity_info"
+                style="@style/me_activity_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="150dip"
+                android:hint="请输入活动详情"
+                android:textColorHint="#c3c3c3"
+                android:textColor="#797979"
+                android:maxLength="2000" />
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                android:text="活动地址"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/txt_18" />
+
+            <com.meetrend.haopingdian.widget.MyEditText
+                android:id="@+id/et_activity_address"
+                style="@style/me_activity_style"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:hint="请输入活动地址"
+                android:textColorHint="#c3c3c3"
+                android:textColor="#797979"
+                android:maxLength="50" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                android:text="活动主办方"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/txt_18" />
+
+            <com.meetrend.haopingdian.widget.MyEditText
+                android:id="@+id/et_activity_sponsor"
+                style="@style/me_activity_style"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:hint="请输入活动主办方"
+                android:textColorHint="#c3c3c3"
+                android:textColor="#797979"
+                android:maxLength="50" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                android:text="活动参与方式"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/txt_18" />
+
+            <com.meetrend.haopingdian.widget.MyEditText
+                android:id="@+id/et_activity_way"
+                style="@style/me_activity_style"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="请输入活动参与方式"
+                android:textColorHint="#c3c3c3"
+                android:textColor="#797979"
+                android:maxLength="100" />
+
+            <Button
+                android:id="@+id/btn_activity_over"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_green"
+                android:text="完成"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt_18" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

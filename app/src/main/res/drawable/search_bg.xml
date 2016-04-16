@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <solid android:color="@android:color/white" />
+
+    <corners android:radius="@dimen/ios_button_corner_size" />
+
+    <padding
+        android:bottom="@dimen/ios_button_corner_size"
+        android:left="@dimen/ios_button_corner_size"
+        android:right="@dimen/ios_button_corner_size"
+        android:top="@dimen/ios_button_corner_size" />
+
+</shape>

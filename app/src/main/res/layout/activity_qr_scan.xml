@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true" >
+
+    <include 
+        layout = "@layout/two_widget_title_layout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@android:color/transparent" >
+
+        <SurfaceView
+            android:id="@+id/capture_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/capture_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/capture_mask_top"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/qr_scan_mask" >
+
+                <TextView
+                    android:id="@+id/tophintview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/capture_crop_view"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/capture_mask_top"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/qr_capture" >
+
+                <ImageView
+                    android:id="@+id/capture_scan_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/qr_scan_line" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/capture_mask_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/capture_crop_view"
+                android:background="@drawable/qr_scan_mask" />
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/capture_crop_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="将二维码/条码放入框内，即可自动扫描"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/capture_mask_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@id/capture_mask_bottom"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/capture_mask_top"
+                android:layout_toLeftOf="@id/capture_crop_view"
+                android:background="@drawable/qr_scan_mask" />
+
+            <ImageView
+                android:id="@+id/capture_mask_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@id/capture_mask_bottom"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/capture_mask_top"
+                android:layout_toRightOf="@id/capture_crop_view"
+                android:background="@drawable/qr_scan_mask" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_view"
+        android:layout_width="fill_parent"
+        android:layout_height="80dip"
+        android:orientation="horizontal"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:background="#e0000000"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/editview"
+            android:layout_width="0dip"
+            android:layout_height="45dip"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/scn_bottom_bg"
+            android:digits="0123456789"
+            android:hint="请输入支付码"
+            android:inputType="number"
+            android:paddingLeft="10dip"
+            android:textColor="#ffffff"
+            android:textColorHint="#7c7c7c"
+            android:textCursorDrawable="@drawable/editcursor_bg"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/sureview"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dip"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#09bb07"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

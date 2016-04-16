@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_bg">
+
+    <ScrollView
+        android:id = "@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/currentTime_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textColor="#595959"
+                android:textSize="14sp" />
+
+            <com.meetrend.haopingdian.widget.LineChartView
+                android:id="@+id/mplineview"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/group_radio_btns"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/button1"
+                        android:layout_width="81dip"
+                        android:layout_height="35dip"
+                        android:background="@drawable/datater_time_btn_bg"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="7天"
+                        android:textColor="@drawable/selelct_text_color" />
+
+                    <RadioButton
+                        android:id="@+id/button2"
+                        android:layout_width="81dip"
+                        android:layout_height="35dip"
+                        android:layout_marginLeft="11dip"
+                        android:background="@drawable/datater_time_btn_bg"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="30天"
+                        android:textColor="@drawable/selelct_text_color" />
+
+                    <RadioButton
+                        android:id="@+id/button3"
+                        android:layout_width="81dip"
+                        android:layout_height="35dip"
+                        android:layout_marginLeft="11dip"
+                        android:background="@drawable/datater_time_btn_bg"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="90天"
+                        android:textColor="@drawable/selelct_text_color" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_marginTop="17dip" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="20dip"
+                android:background="#f7f7f7" />
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <com.meetrend.haopingdian.widget.MyListView
+                android:id="@+id/mylistview"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:divider="@null" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

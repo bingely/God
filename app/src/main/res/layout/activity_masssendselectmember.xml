@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/memberlist_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height" >
+
+        <TextView
+            style="@style/fragment_title_style"
+            android:layout_width="match_parent"
+            android:text="选择联系人" />
+
+        <ImageView
+            android:id="@+id/actionbar_home"
+            style="@style/actionbar_home_style" />
+
+        <TextView
+            android:id="@+id/iv_contact_add_contact"
+            style="@style/fragment_title_style"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/global_margin_left"
+            android:text="添加" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <EditText
+            android:id = "@+id/search_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:background="@null"
+            android:drawablePadding="10dip"
+            android:hint="请入搜索关键字"
+            android:padding="3dip"
+            android:paddingLeft="10dip"
+            android:textColor="#252525"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:drawableLeft="@drawable/icon_search"
+            android:textColorHint="@color/gray_text"
+            android:textCursorDrawable="@drawable/editcursor_bg"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#4cd964" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_contact"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <!-- 联系人 -->
+
+        <TextView
+            android:id="@+id/tv_memberlist_emtpy"
+            style="@style/empty_listview_style" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ListView
+                android:id="@+id/lv_member"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:choiceMode="multipleChoice"
+                android:divider="@null"
+                android:overScrollMode="never" />
+
+            <TextView
+                android:id = "@+id/no_searchlist_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="top|center_horizontal"
+                android:textColor="@color/gray_text"
+                android:background="@color/window_bg_color"
+                android:textSize="@dimen/big_text_size"
+                android:text="@string/no_search_list"
+                android:paddingTop="50dip"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+
+
+        <com.meetrend.haopingdian.widget.SideBar
+            xmlns:sidebar="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/alphat_layout"
+            android:layout_width="23dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="2dip"
+            android:alpha="0.5"
+            android:visibility="gone"
+            sidebar:isshowmorealphat="false" />
+
+        <TextView
+            android:id="@+id/tv_alphabet_ui_tableview"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/alpat_dialog_tv_bg"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="40sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- </FrameLayout> -->
+
+    <RelativeLayout
+        android:id="@+id/bottom_member_added"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#f9f9f9" >
+
+        <View
+            android:id="@+id/bottom_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#e3e3e3" />
+
+        <TextView
+            android:id="@+id/mass_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/bottom_line"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/shape"
+            android:gravity="center"
+            android:minWidth="100dip"
+            android:padding="10dip"
+            android:text="确定(0)"
+            android:textColor="#4cd964"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/selectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="26dip"
+            android:layout_toLeftOf="@id/mass_ok"
+            android:button="@drawable/member_check_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/all_select"
+            android:textColor="#444444"
+            android:textSize="@dimen/txt_20" />
+    </RelativeLayout>
+
+</LinearLayout>

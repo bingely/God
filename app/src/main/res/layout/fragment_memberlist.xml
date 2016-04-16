@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/memberlist_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height">
+
+        <TextView
+            style="@style/fragment_title_style"
+            android:layout_width="match_parent"
+            android:text="@string/str_contact" />
+
+        <ImageView
+            android:id="@+id/actionbar_home"
+            style="@style/actionbar_home_style" />
+
+        <TextView
+            android:id="@+id/iv_contact_add_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/header_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/global_margin_left"
+            android:background="@color/happyred"
+            android:gravity="center"
+            android:padding="@dimen/txt_10"
+            android:text="添加"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/txt_18" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+
+        <com.meetrend.swipemenulistview.SwipeMenuListView
+            android:id="@+id/lv_member"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:overScrollMode="never" />
+
+        <FrameLayout
+            android:layout_width="23dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dip"
+            android:layout_marginTop="48dip">
+
+            <com.meetrend.haopingdian.widget.SideBar xmlns:sidebar="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/alphat_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:alpha="0.5"
+                sidebar:isshowmorealphat="false" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_alphabet_ui_tableview"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/alpat_dialog_tv_bg"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="40sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

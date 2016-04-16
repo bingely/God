@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:item="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:background="@color/happyred">
+
+        <TextView
+            android:id="@+id/m_title"
+            style="@style/fragment_title_style"
+            android:layout_width="260dp"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:contentDescription="标题" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f7f7f7"
+            android:orientation="vertical">
+
+            <!-- 头像 -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/margin_18"
+                android:background="@color/listview_line_color" />
+
+            <RelativeLayout
+                android:id="@+id/my_photo_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/list_item_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_18">
+
+                <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/my_photo"
+                    android:layout_width="55dip"
+                    android:layout_height="55dip"
+                    android:layout_centerVertical="true"
+                    android:focusable="false"
+                    fresco:placeholderImage="@drawable/loading_default"
+                    fresco:retryImageScaleType="centerCrop"
+                    fresco:roundAsCircle="false"
+                    fresco:roundBottomLeft="true"
+                    fresco:roundBottomRight="true"
+                    fresco:roundTopLeft="true"
+                    fresco:roundTopRight="true"
+                    fresco:roundedCornerRadius="0dip" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_toRightOf="@+id/my_photo"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/my_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:lines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/black_1"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/my_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:focusable="false"
+                        android:textColor="#919191"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_18"
+                    android:src="@drawable/right_arrow" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/listview_line_color" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/margin_18"
+                android:background="@color/listview_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <!-- 门店二维码 -->
+
+                <com.meetrend.haopingdian.widget.ComItemLayoutView
+                    android:id="@+id/my_erweima"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:background="@drawable/list_item_bg"
+                    item:cicon="@drawable/qrcode_mine"
+                    item:ctitle="我的二维码" />
+
+                <View
+                    style="@style/horizontal_no_margin_divider_style"
+                    android:layout_marginLeft="@dimen/comitem_margin_left" />
+
+                <com.meetrend.haopingdian.widget.ComItemLayoutView
+                    android:id="@+id/store_erweima"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:background="@drawable/list_item_bg"
+                    item:cicon="@drawable/store_er"
+                    item:ctitle="门店二维码" />
+
+                <View
+                    style="@style/horizontal_no_margin_divider_style"
+                    android:layout_marginLeft="@dimen/comitem_margin_left" />
+
+                <com.meetrend.haopingdian.widget.ComItemLayoutView
+                    android:id="@+id/store_get_tiaoma"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:background="@drawable/list_item_bg"
+                    item:cicon="@drawable/icon_black_tiaoma"
+                    item:ctitle="门店收款码" />
+
+                <View
+                    style="@style/horizontal_no_margin_divider_style"
+                    android:layout_marginLeft="@dimen/comitem_margin_left" />
+
+
+                <com.meetrend.haopingdian.widget.ComItemLayoutView
+                    android:id="@+id/store_code"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:background="@drawable/list_item_bg"
+                    item:cicon="@drawable/icon_store_change"
+                    item:ctitle="切换店铺" />
+
+                <View
+                    style="@style/horizontal_no_margin_divider_style"
+                    android:layout_marginLeft="@dimen/comitem_margin_left" />
+
+                <!-- 密码修改 -->
+
+                <com.meetrend.haopingdian.widget.ComItemLayoutView
+                    android:id="@+id/pwd_modify"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:background="@drawable/list_item_bg"
+                    item:cicon="@drawable/icon_pwd_modify"
+                    item:ctitle="修改密码" />
+
+                <View
+                    style="@style/horizontal_no_margin_divider_style"
+                    android:layout_marginLeft="@dimen/comitem_margin_left" />
+
+                <!-- 关于大益 -->
+
+                <com.meetrend.haopingdian.widget.ComItemLayoutView
+                    android:id="@+id/about_diyi"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:background="@drawable/list_item_bg"
+                    item:cicon="@drawable/icon_about_dayi"
+                    item:ctitle="关于我们" />
+
+                <View
+                    style="@style/horizontal_no_margin_divider_style"
+                    android:layout_marginLeft="@dimen/comitem_margin_left" />
+
+                <!-- 退出登录 -->
+
+                <com.meetrend.haopingdian.widget.ComItemLayoutView
+                    android:id="@+id/unlogin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:background="@drawable/list_item_bg"
+                    item:cicon="@drawable/icon_logout"
+                    item:ctitle="退出登录" />
+
+                <View style="@style/horizontal_no_margin_divider_style" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#f7f7f7">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="30dp"
+                        android:src="@drawable/app_log" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/two_widget_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/layout_forget_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_18"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.3px"
+            android:background="@color/listview_line_color" />
+
+        <!-- 新密码 -->
+
+        <LinearLayout
+            style="@style/setting_me_layout_style"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/me_info_style"
+                android:layout_width="80dip"
+                android:gravity="left|center_vertical"
+                android:text="    新密码" />
+
+            <EditText
+                android:id="@+id/new_pwd"
+                style="@style/me_info_style"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="left|center_vertical"
+                android:hint="@string/hint_new_pwd"
+                android:maxLength="20"
+                android:paddingLeft="15dip"
+                android:password="true"
+                android:textCursorDrawable="@drawable/editcursor_bg" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.1px"
+            android:layout_marginLeft="20dip"
+            android:background="@color/listview_line_color" />
+
+        <!-- 确认新密码 -->
+
+        <LinearLayout
+            style="@style/setting_me_layout_style"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/me_info_style"
+                android:layout_width="80dip"
+                android:gravity="left|center_vertical"
+                android:text="@string/title_confim_pwd" />
+
+            <EditText
+                android:id="@+id/confim_pwd"
+                style="@style/me_info_style"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="left|center_vertical"
+                android:hint="@string/hint_confim_pwd"
+                android:maxLength="20"
+                android:paddingLeft="15dip"
+                android:password="true"
+                android:textCursorDrawable="@drawable/editcursor_bg" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.3px"
+            android:background="@color/listview_line_color" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_pwd_ok"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/red_btn_height"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_login_findpwd"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="确 认"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_18" />
+
+
+</LinearLayout>

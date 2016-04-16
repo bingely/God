@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="72dip"
+    android:background="@drawable/list_item_bg"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_margin_left_right"
+    android:paddingRight="@dimen/activity_margin_left_right">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="48dip"
+            android:layout_height="60dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="2dip"
+            android:layout_marginTop="2dip">
+
+            <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/memberphoto"
+                android:layout_width="48dip"
+                android:layout_height="48dip"
+                android:layout_gravity="center_vertical"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/loading_default"
+                fresco:retryImageScaleType="centerCrop"
+                fresco:roundAsCircle="false"
+                fresco:roundBottomLeft="true"
+                fresco:roundBottomRight="true"
+                fresco:roundTopLeft="true"
+                fresco:roundTopRight="true"
+                fresco:roundedCornerRadius="5dp" />
+
+            <ImageView
+                android:id="@+id/undistributeimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wfp_l" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/connact_name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="肖建斌"
+                android:textColor="@color/text_small_black"
+                android:textSize="@dimen/member_list_name_textsize" />
+
+            <ImageView
+                android:id="@+id/cannottal_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dip"
+                android:src="@drawable/forbid_send"
+                android:visibility="gone"
+                android:contentDescription="48小时没有沟通"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_member_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:padding="@dimen/member_list_status_padding"
+            android:textSize="@dimen/member_list_status_textsize"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.2px"
+        android:layout_gravity="bottom"
+        android:background="@color/listview_line_color" />
+
+</LinearLayout>

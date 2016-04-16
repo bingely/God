@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_item_bg"
+    android:orientation="vertical" >
+
+    <!-- head -->
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="15dip"
+        android:background="#EAEAEA" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/order_list_margin_left" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/order_stutas_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="1dip"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/item_order_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dip"
+                    android:gravity="center_vertical|left"
+                    android:singleLine="true"
+                    android:text="订单编号：14552555"
+                    android:textColor="@color/black_1"
+                    android:textSize="@dimen/order_list_textsize" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/item_order_create_time"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:singleLine="true"
+                android:text="下单时间1045885"
+                android:textColor="#797979"
+                android:textSize="@dimen/order_list_small_textsize" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/item_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="@dimen/order_list_status_marginRight" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:background="#dfe3e6" />
+
+    <!-- footer -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/order_list_margin_left" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/item_order_product_image"
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/list_image_margin_top"
+            android:layout_marginLeft="@dimen/list_image_margin_left"
+            android:layout_marginTop="@dimen/list_image_margin_top"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/loading_default"
+            fresco:retryImageScaleType="centerCrop" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dip"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/item_order_product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="都是"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/black_1"
+                    android:textSize="@dimen/txt_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/item_order_user"
+                    style="@style/item_order_tv_style" />
+
+                <TextView
+                    android:id="@+id/item_order_executor"
+                    style="@style/item_order_tv_style" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/item_order_amount"
+                    style="@style/item_order_tv_style" />
+
+                <TextView
+                    android:id="@+id/item_order_total_price"
+                    style="@style/item_order_tv_style" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- footer right -->
+
+    </LinearLayout>
+    <!-- footer -->
+
+</LinearLayout>

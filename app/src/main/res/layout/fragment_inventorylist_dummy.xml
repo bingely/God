@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionbar_style" >
+
+        <include layout="@layout/include_actionbar" />
+    </LinearLayout>
+
+    <com.meetrend.haopingdian.widget.ProgressDialog
+        android:id="@+id/pd_inventory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+</LinearLayout>

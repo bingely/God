@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:paddingLeft="55dip" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_gravity="top"
+        android:background="@color/listview_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/child_relative_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="11dip"
+        android:paddingTop="11dip" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/child_product_img"
+            android:layout_width="65dip"
+            android:layout_height="65dip"
+            android:layout_centerVertical="true"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/loading_default"
+            fresco:retryImageScaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dip"
+            android:layout_toRightOf="@id/child_product_img"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/child_product_name_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingRight="10dip"
+                android:singleLine="true"
+                android:text="鸿运圆茶201"
+                android:textColor="#e13023"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/child_product_kucun_name_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingRight="10dip"
+                android:singleLine="true"
+                android:text="库存：201"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/child_product_price_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingRight="10dip"
+                android:singleLine="true"
+                android:text="单价110"
+                android:textColor="#909090"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/child_product_mark_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingRight="10dip"
+                android:text="这是一种茶"
+                android:textColor="#909090"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

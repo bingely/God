@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <!-- 二级菜单框架 -->
+
+    <RelativeLayout
+        android:id="@+id/second_menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:paddingLeft="10dip" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sencond_img"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/loading_default"
+            fresco:retryImageScaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/secon_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gray_text"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="20dip"
+            android:layout_toRightOf="@id/sencond_img"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLength="40"
+            android:text="红茶"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/sencond_right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip" />
+
+        <ImageView
+            android:id="@+id/mGroupimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/second_right_arrow" />
+    </RelativeLayout>
+    <!-- 三级菜单框架 -->
+
+    <com.meetrend.haopingdian.widget.MyListView
+        android:id="@+id/third_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dip"
+        android:cacheColorHint="#00000000"
+        android:listSelector="#00000000"
+        android:divider="@null" />
+
+</LinearLayout>

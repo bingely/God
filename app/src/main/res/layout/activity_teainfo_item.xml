@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <ImageView
+        android:id="@+id/img_tea_photo"
+        style="@style/list_image_style"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="80dp" />
+
+    <RadioButton
+        android:id="@+id/rb_tea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/margin_18"
+        android:layout_marginRight="@dimen/margin_18"
+        android:button="@drawable/member_check_selector"
+        android:focusable="false" />
+
+    <TextView
+        android:id="@+id/tv_tea_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/rb_tea"
+        android:layout_toRightOf="@id/img_tea_photo"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_18"
+        android:singleLine="true"
+        android:text="生茶"
+        android:textSize="@dimen/txt_20" />
+
+</RelativeLayout>

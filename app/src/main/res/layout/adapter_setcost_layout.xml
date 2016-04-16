@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/window_bg"
+              android:paddingTop="15dip">
+
+    <ImageView
+        android:id = "@+id/cost_item_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dip"
+        android:src="@drawable/close_cost"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:paddingLeft="10dip"
+        android:visibility="visible"/>
+    <LinearLayout
+        android:layout_below="@id/cost_item_clear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/listview_line_color"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dip">
+
+            <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textColor="#252525"
+                android:textSize="@dimen/order_tea_txtsize"
+                android:text="费用名称"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id = "@+id/cost_name_edit"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:textCursorDrawable="@drawable/editcursor_bg"
+                android:hint="费用名称"
+                android:textSize="@dimen/order_tea_txtsize"
+                android:gravity="center_vertical|right"
+                android:paddingRight="15dip"/>
+
+        </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dip"
+                android:background="@color/listview_line_color"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:textColor="#252525"
+                    android:textSize="@dimen/order_tea_txtsize"
+                    android:text="金额(¥)"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id = "@+id/cost_value_edit"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:background="@null"
+                    android:textSize="@dimen/order_tea_txtsize"
+                    android:textCursorDrawable="@drawable/editcursor_bg"
+                    android:hint="免费请填0，发布后不能修改"
+                    android:gravity="center_vertical|right"
+                    android:digits=".0123456789"
+                    android:inputType="number"
+                    android:paddingRight="15dip"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dip"
+                android:background="@color/listview_line_color"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:textColor="#252525"
+                    android:textSize="@dimen/order_tea_txtsize"
+                    android:text="名额限制"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id = "@+id/cost_peoplelimit_edit"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:background="@null"
+                    android:hint="默认无限制"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:textSize="@dimen/order_tea_txtsize"
+                    android:gravity="center_vertical|right"
+                    android:textCursorDrawable="@drawable/editcursor_bg"
+                    android:paddingRight="15dip"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/listview_line_color"/>
+        
+    </LinearLayout>
+
+
+</RelativeLayout>

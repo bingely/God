@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/multicheck_layout"
+    android:layout_width="match_parent"
+    android:layout_height="65dip"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:id="@+id/front"
+        android:layout_width="fill_parent"
+        android:layout_height="64dip"
+        android:layout_marginBottom="1.2px"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:tag="front" >
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="10dip"
+            android:button="@drawable/checkview_bg" />
+
+        
+           <com.facebook.drawee.view.SimpleDraweeView
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/iv_member_photo"
+        android:layout_width="48dip"
+        android:layout_height="48dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/list_image_margin_top"
+        android:layout_marginLeft="@dimen/list_image_margin_left"
+        android:layout_marginTop="@dimen/list_image_margin_top"
+        android:layout_toRightOf="@id/group_check"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/loading_default"
+        fresco:retryImageScaleType="centerCrop"
+        fresco:roundAsCircle="false"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundedCornerRadius="5dp" />
+
+        <TextView
+            android:id="@+id/tv_member_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dip"
+            android:layout_weight="1"
+            android:text="肖建斌"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textSize="@dimen/member_list_name_textsize"
+            android:textColor="#111111" />
+
+        <TextView
+            android:id="@+id/tv_member_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="14dip"
+            android:padding="@dimen/member_list_status_padding"
+            android:textSize="@dimen/member_list_status_textsize"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.2px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dip"
+        android:background="@color/listview_line_color" />
+
+</RelativeLayout>
+
+
+<!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/child_relative"
+    android:layout_width="match_parent"
+    android:layout_height="60dip"
+    android:background="#ffffff" >
+
+    <CheckBox
+        android:id="@+id/child_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="10dip"
+        android:button="@drawable/checkview_bg" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/child_img"
+        android:layout_width="48dip"
+        android:layout_height="48dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/list_image_margin_top"
+        android:layout_marginLeft="@dimen/list_image_margin_left"
+        android:layout_marginRight="12dip"
+        android:layout_marginTop="@dimen/list_image_margin_top"
+        android:layout_toRightOf="@id/child_check"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/loading_default"
+        fresco:retryImageScaleType="centerCrop"
+        fresco:roundAsCircle="false"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundedCornerRadius="5dp" />
+
+    <TextView
+        android:id="@+id/childname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/list_item_image_margin"
+        android:layout_toRightOf="@id/child_img"
+        android:singleLine="true"
+        android:textColor="#111111"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_member_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="14dip"
+        android:padding="@dimen/member_list_status_padding"
+        android:textSize="@dimen/member_list_status_textsize" />
+	<View
+        android:layout_width="fill_parent"
+        android:layout_height="1.2px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dip"
+        android:background="@color/listview_line_color" />
+</RelativeLayout> -->

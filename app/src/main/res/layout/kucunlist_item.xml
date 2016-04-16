@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="85dip"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:paddingLeft="11dip" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/parent_product_img"
+            android:layout_width="65dip"
+            android:layout_height="65dip"
+            android:layout_centerVertical="true"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/loading_default"
+            fresco:retryImageScaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="25dip"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:layout_toRightOf="@id/parent_product_img"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/parent_product_name_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#e13023"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/parent_product_kucun_name_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/parent_product_price_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#909090"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/parent_product_mark_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#909090"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/parent_product_hint_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="13dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/icon_unfold"
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/item_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@null" 
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_gravity="bottom"
+        android:background="@color/listview_line_color" />
+
+</LinearLayout>

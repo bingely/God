@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/connottalkview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:layout_marginLeft="68dip"
+        android:layout_marginTop="15dip"
+        android:background="@drawable/msg_list_footer_layout"
+        android:ellipsize="end"
+        android:padding="1dip"
+        android:singleLine="true"
+        android:text="用户未关注或超48小时未发起聊天，不能发送消息"
+        android:textColor="#ffffff"
+        android:textSize="10sp" />
+
+</LinearLayout>

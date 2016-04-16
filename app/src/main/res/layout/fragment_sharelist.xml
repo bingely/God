@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <com.meetrend.haopingdian.widget.GridView
+        android:id="@+id/share_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="60dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="4"
+        android:padding="10dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+    <TextView 
+        android:id="@+id/emptyview"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:textColor="#444444"
+        android:visibility="gone"
+        android:text="抱歉，空空如也!"/>
+
+</FrameLayout>

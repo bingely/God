@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dip"
+    android:layout_marginTop="5dip" >
+
+    <ImageView
+        android:id="@+id/headimg"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dip"
+         />
+
+    <FrameLayout
+        android:id="@+id/content_voice_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dip"
+        android:layout_toLeftOf="@id/headimg"
+        android:background="@drawable/chatto_bg_focused" >
+
+        <View
+            android:id="@+id/voice_icon"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/adj" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/time_length_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dip"
+        android:layout_toLeftOf="@id/content_voice_layout"
+        android:textColor="#ff7777" />
+
+</RelativeLayout>

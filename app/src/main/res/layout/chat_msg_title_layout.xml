@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/actionbar_height"
+    android:orientation="horizontal"
+    android:background="@color/happyred" >
+
+    <ImageView
+        android:id="@+id/actionbar_home"
+        style="@style/actionbar_home_style"
+        android:layout_marginLeft="@dimen/actionbar_paddingLeft"/>
+
+    <TextView
+        android:id="@+id/actionbar_title"
+        style="@style/actionbar_title_style" />
+        
+        
+        <ImageView 
+            android:id = "@+id/person_detail_icon"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/icon_info"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dip"
+            android:layout_alignParentRight="true"/>
+        
+        <CheckBox 
+            android:id = "@+id/msg_check_box"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:button="@null"
+              android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/person_detail_icon"
+            android:background="@drawable/msg_checkbox_msg"/>
+
+</RelativeLayout>

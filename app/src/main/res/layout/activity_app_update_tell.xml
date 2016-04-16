@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/bar"
+        style="@style/actionbar_style"
+        android:layout_alignParentTop="true" >
+
+        <include layout="@layout/include_actionbar" />
+    </LinearLayout>
+
+    <com.meetrend.haopingdian.widget.ProgressWebView
+        android:id="@+id/my_web"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/bar" />
+</RelativeLayout>

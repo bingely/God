@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ordermanager_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true" >-->
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true" >
+
+    <RelativeLayout
+        android:id="@+id/ordernamager_title_layout"
+        style="@style/actionbar_style"
+        android:layout_gravity="top">
+
+        <ImageView
+            android:id="@+id/actionbar_home"
+            style="@style/actionbar_home_style" />
+
+        <TextView
+            android:id="@+id/actionbar_title"
+            style="@style/actionbar_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="7dip"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/txt_20" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/ordermanager_container"
+        android:layout_marginTop="@dimen/actionbar_height"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <!--pop 容器-->
+    <FrameLayout
+        android:id="@+id/popwindow_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/actionbar_height"/>
+</FrameLayout>
+
+
+    <!--
+    </LinearLayout>-->

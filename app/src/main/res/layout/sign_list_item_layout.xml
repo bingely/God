@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dip"
+    android:paddingTop="10dip" >
+
+    <TextView
+        android:id="@+id/dymview"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:background="#00000000" />
+
+    <FrameLayout
+        android:id="@+id/item_start_frame"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        android:layout_below="@id/dymview" >
+
+        <ImageView
+            android:id="@+id/item_start_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:src="@drawable/sign_circle_icon" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/item_start_frame"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="20dip"
+        android:layout_toRightOf="@id/item_start_frame"
+        android:background="@drawable/sign_list_item_bg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/addressView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:gravity="center_vertical"
+            android:paddingBottom="7dip"
+            android:paddingLeft="7dip"
+            android:paddingRight="7dip"
+            android:paddingTop="7dip"
+            android:text="在深圳市美创科技有限公司"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/descontentview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressView"
+            android:layout_marginLeft="6dip"
+            android:gravity="center_vertical"
+            android:paddingBottom="7dip"
+            android:paddingLeft="7dip"
+            android:paddingRight="7dip"
+            android:text="上午在通州电子拜访客倒萨大法师"
+            android:textColor="#888888"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

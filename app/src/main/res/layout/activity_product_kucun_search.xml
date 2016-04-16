@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/window_bg">
+
+    <include layout="@layout/two_widget_title_layout" />
+
+    <include layout="@layout/top_search_edit_layout" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/black_line_color" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <ScrollView
+                android:id = "@+id/scrollview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="23"
+                android:overScrollMode="never"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/left_container_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="9"
+                android:orientation="vertical" >
+
+                <com.meetrend.haopingdian.widget.PinnedHeaderListView
+                    android:id="@+id/pinnedListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@null" >
+                </com.meetrend.haopingdian.widget.PinnedHeaderListView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/emptyview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#f7f7f7"
+            android:gravity="top|center_horizontal"
+            android:paddingTop="50dip"
+            android:text="没有要显示的数据"
+            android:textColor="@color/gray_text"
+            android:visibility="gone" />
+        
+    </FrameLayout>
+
+</LinearLayout>

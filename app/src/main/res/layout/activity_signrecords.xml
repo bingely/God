@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/three_widget_titlelayout" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#e4e4e4" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dip"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dip"
+                android:background="#ededed" >
+            </View>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="31.5dip"
+                android:paddingTop="30dip" >
+
+                <com.meetrend.haopingdian.pulltorefresh.library.PullToRefreshListView
+                    android:id="@+id/id_sign_in_listview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@null"
+                    android:overScrollMode="never"/>
+
+                <!--<TextView
+                    android:id="@+id/sign_empty_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="您还没有签到记录"
+                    android:textColor="@color/gray_text"
+                    android:textSize="16sp" 
+                    android:layout_marginRight="12dip"
+                    android:layout_marginBottom="60dip"
+                    android:visibility="gone"/>-->
+                
+            </FrameLayout>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/sign_num_view"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_gravity="top"
+                android:background="#79797A"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/date_bg" >
+
+                <TextView
+                    android:id="@+id/id_date_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dip"
+                    android:text="11月"
+                    android:textColor="#444444"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/id_date_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_date_month"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="2dip"
+                    android:gravity="center"
+                    android:text="19"
+                    android:textColor="#ff0000"
+                    android:textSize="26sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/btn_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="26dip"
+            android:background="#00000000"
+            android:onClick="sign"
+            android:src="@drawable/btn_sign" />
+    </FrameLayout>
+
+</LinearLayout>

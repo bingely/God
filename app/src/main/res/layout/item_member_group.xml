@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dip"
+    android:background="@drawable/list_item_bg"
+    android:orientation="horizontal" >
+
+    <!-- <com.meetrend.haopingdian.widget.RoundImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/iv_member_group_photo"
+        android:layout_marginLeft="15dip"
+        android:layout_height="@dimen/global_list_image_size"
+        android:layout_width="@dimen/global_list_image_size"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/loading_default"
+        app:roundHeight="@dimen/round_radius"
+        app:roundWidth="@dimen/round_radius" /> -->
+    
+     
+   <com.facebook.drawee.view.SimpleDraweeView
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/iv_member_group_photo"
+        android:layout_width="48dip"
+        android:layout_height="48dip"
+        android:layout_marginLeft="15dip"
+        android:layout_gravity="center_vertical"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/loading_default"
+        fresco:retryImageScaleType="centerCrop"
+        fresco:roundAsCircle="false"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundedCornerRadius="5dp" />
+
+    <TextView
+        android:id="@+id/tv_member_group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="60dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="12dip"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="我的群组"
+        android:textColor="@color/text_small_black"
+        android:textSize="@dimen/inventory_list_textsize" />
+
+</LinearLayout>

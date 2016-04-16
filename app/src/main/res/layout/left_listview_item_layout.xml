@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ebedf0"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/left_name_view"
+        android:layout_width="90dip"
+        android:layout_height="wrap_content"
+        android:minHeight="49dip"
+        android:gravity="center"
+        android:paddingLeft="2dip"
+        android:paddingRight="2dip"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+</LinearLayout>

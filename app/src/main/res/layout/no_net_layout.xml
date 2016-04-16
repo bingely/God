@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFEC8B"
+    android:orientation="vertical"
+    android:paddingLeft="12dip"
+    android:paddingRight="15dip" >
+
+    <ImageView
+        android:id="@+id/hintimg"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/msg_failed" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@id/hintimg"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip"
+        android:text="世界上最远的距离就是没有网络，检查设置"
+        android:textColor="#252525"
+        android:textSize="14sp" />
+
+    <!--
+         <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/right_arrow" />
+    -->
+
+</RelativeLayout>

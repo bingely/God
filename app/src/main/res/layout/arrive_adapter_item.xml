@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dip"
+    android:layout_height="80dip"
+    android:layout_alignParentLeft="true"
+    android:layout_centerVertical="true"
+    android:orientation="vertical" >
+
+    <com.meetrend.haopingdian.widget.RoundImageView
+         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/arrive_adapter_child_img"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo" 
+         android:scaleType="centerCrop"
+        app:roundWidth="@dimen/round_radius"
+		app:roundHeight="@dimen/round_radius"/>
+
+    <TextView
+        android:id="@+id/arrive_adapter_child_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dip"
+        android:text="肖建斌"
+        android:singleLine="true"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:textColor="#8e8e93"
+        android:textSize="14sp" />
+
+</LinearLayout>

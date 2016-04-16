@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/happyred"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:paddingRight="10dip"
+    android:paddingLeft="0dip">
+
+    <ImageView
+        android:id="@+id/back_img"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_gravity="center_vertical|left"
+        android:paddingRight="5dip"
+        android:src="@drawable/actionbar_home" />
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="36dip"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@drawable/search_layout_bg">
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="18dip"
+            android:layout_height="18dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/icon_search" />
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26dip"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入搜索关键字"
+            android:paddingLeft="10dip"
+            android:paddingRight="36dip"
+            android:textColor="#000000"
+            android:singleLine="true"
+            android:textCursorDrawable="@drawable/editcursor_bg"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/clearbtn"
+            android:layout_width="36dip"
+            android:layout_height="36dip"
+            android:paddingLeft="9dip"
+            android:paddingBottom="9dip"
+            android:paddingTop="9dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/clear_pressed"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/searchbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginLeft="5dip"
+        android:gravity="left|center_vertical"
+        android:padding="5dip"
+        android:text="取消"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

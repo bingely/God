@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="emoji_1">
+        <item>@drawable/face001</item>
+        <item>@drawable/face002</item>
+        <item>@drawable/face003</item>
+        <item>@drawable/face004</item>
+        <item>@drawable/face005</item>
+        <item>@drawable/face006</item>
+        <item>@drawable/face007</item>
+        <item>@drawable/face008</item>
+        <item>@drawable/face009</item>
+        <item>@drawable/face010</item>
+        <item>@drawable/face011</item>
+        <item>@drawable/face012</item>
+        <item>@drawable/face013</item>
+        <item>@drawable/face014</item>
+        <item>@drawable/face015</item>
+        <item>@drawable/face016</item>
+        <item>@drawable/face017</item>
+        <item>@drawable/face018</item>
+        <item>@drawable/face019</item>
+        <item>@drawable/face020</item>
+    </string-array>
+    <string-array name="emoji_2">
+        <item>@drawable/face021</item>
+        <item>@drawable/face022</item>
+        <item>@drawable/face023</item>
+        <item>@drawable/face024</item>
+        <item>@drawable/face025</item>
+        <item>@drawable/face026</item>
+        <item>@drawable/face027</item>
+        <item>@drawable/face028</item>
+        <item>@drawable/face029</item>
+        <item>@drawable/face030</item>
+        <item>@drawable/face031</item>
+        <item>@drawable/face032</item>
+        <item>@drawable/face033</item>
+        <item>@drawable/face034</item>
+        <item>@drawable/face035</item>
+        <item>@drawable/face036</item>
+        <item>@drawable/face037</item>
+        <item>@drawable/face038</item>
+        <item>@drawable/face039</item>
+        <item>@drawable/face040</item>
+    </string-array>
+    <string-array name="emoji_3">
+        <item>@drawable/face041</item>
+        <item>@drawable/face042</item>
+        <item>@drawable/face043</item>
+        <item>@drawable/face044</item>
+        <item>@drawable/face045</item>
+        <item>@drawable/face046</item>
+        <item>@drawable/face047</item>
+        <item>@drawable/face048</item>
+        <item>@drawable/face049</item>
+        <item>@drawable/face050</item>
+        <item>@drawable/face051</item>
+        <item>@drawable/face052</item>
+        <item>@drawable/face053</item>
+        <item>@drawable/face054</item>
+        <item>@drawable/face055</item>
+        <item>@drawable/face056</item>
+        <item>@drawable/face057</item>
+        <item>@drawable/face058</item>
+        <item>@drawable/face059</item>
+        <item>@drawable/face060</item>
+    </string-array>
+    <string-array name="emoji_4">
+        <item>@drawable/face061</item>
+        <item>@drawable/face062</item>
+        <item>@drawable/face063</item>
+        <item>@drawable/face064</item>
+        <item>@drawable/face065</item>
+        <item>@drawable/face066</item>
+        <item>@drawable/face067</item>
+        <item>@drawable/face068</item>
+        <item>@drawable/face069</item>
+        <item>@drawable/face070</item>
+        <item>@drawable/face071</item>
+        <item>@drawable/face072</item>
+        <item>@drawable/face073</item>
+        <item>@drawable/face074</item>
+        <item>@drawable/face075</item>
+        <item>@drawable/face076</item>
+        <item>@drawable/face077</item>
+        <item>@drawable/face078</item>
+        <item>@drawable/face079</item>
+        <item>@drawable/face080</item>
+    </string-array>
+    <string-array name="emoji_5">
+        <item>@drawable/face081</item>
+        <item>@drawable/face082</item>
+        <item>@drawable/face083</item>
+        <item>@drawable/face084</item>
+        <item>@drawable/face085</item>
+        <item>@drawable/face086</item>
+        <item>@drawable/face087</item>
+        <item>@drawable/face088</item>
+        <item>@drawable/face089</item>
+        <item>@drawable/face090</item>
+        <item>@drawable/face091</item>
+        <item>@drawable/face092</item>
+        <item>@drawable/face093</item>
+        <item>@drawable/face094</item>
+        <item>@drawable/face095</item>
+        <item>@drawable/face096</item>
+        <item>@drawable/face097</item>
+        <item>@drawable/face098</item>
+        <item>@drawable/face099</item>
+        <item>@drawable/face100</item>
+    </string-array>
+     <string-array name="msg_add_string">
+        <item>群发消息</item>
+    </string-array>
+    <string-array name="contact_add_string">
+        <item>手动添加</item>
+        <item>从手机通讯录导入</item>
+    </string-array>
+    <string-array name="inventory_viewpager_indicator_title">
+        <item>库存详情</item>
+        <item>历史订单记录</item>
+    </string-array>
+    <string-array name="oder_array_list">
+        <item>按推荐</item>
+        <item>按到场</item>
+    </string-array>
+    
+   <!--  小票打印指令 -->
+        <string-array name="cmd">
+        <item>1B 2B</item><!-- 检测型号 -->
+        <item>09</item><!-- 水平制表 -->
+        <item>0A</item><!-- 换行 -->
+        <item>0D</item><!-- 打印当前存储内容 -->
+        <item>1B 40</item><!-- 初始化打印机 -->
+        <item>1C 2D 01</item><!-- 允许下划线打印 -->
+        <item>1C 2D 00</item><!-- 禁止下划线打印 -->
+        <item>1B 45 01</item><!-- 允许粗体打印 -->
+        <item>1B 45 00</item><!-- 禁止粗体打印 -->
+        <item>Select the font: ASCII (12 * 24) characters (24 * 24),1B 4D 00</item>
+        <item>Select the font: ASCII (8 * 16) characters (16 * 16),1B 4D 01</item>
+        <item>1D 21 00</item><!-- 不放大 -->
+        <item>1D 21 01</item><!-- 纵向放大 -->
+        <item>1D 21 10</item><!-- 横向放大 -->
+        <item>1D 21 11</item><!-- 字符两倍整体放大 -->
+        <item>1B 61 00</item><!-- 左对齐 -->
+        <item>1B 61 01</item><!-- 居中对齐 -->
+        <item>1B 61 02</item><!-- 居右对齐 -->
+        <item>0C</item><!--页进纸-->
+    </string-array>
+
+</resources>

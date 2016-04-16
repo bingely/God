@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_bg_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/two_widget_title_layout" />
+
+    <com.meetrend.haopingdian.util.BounceScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dip"
+                android:background="#f7f7f7" />
+
+            <LinearLayout
+                android:id="@+id/list_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View style="@style/horizontal_no_margin_divider_style" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingLeft="20dip" >
+
+                    <TextView
+                        android:id="@+id/allhint"
+                        style="@style/cash_smallmoney_hint_style"
+                        android:text="商品金额" />
+
+                    <TextView
+                        android:id="@+id/balance_all_product_money"
+                        style="@style/cash_smallmoney_text_style" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="15dip"
+                    android:background="@color/listview_line_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingLeft="20dip" >
+
+                    <TextView
+                        android:id="@+id/youhuiquan_money_hint"
+                        style="@style/cash_smallmoney_hint_style"
+                        android:text="优惠金额" />
+
+                    <TextView
+                        android:id="@+id/balance_youhuiquan_money"
+                        style="@style/cash_smallmoney_text_style" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="15dip"
+                    android:background="@color/black_line_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingLeft="20dip" >
+
+                    <TextView
+                        android:id="@+id/points_hint"
+                        style="@style/cash_smallmoney_hint_style"
+                        android:text="积分金额" />
+
+                    <TextView
+                        android:id="@+id/balance_points"
+                        style="@style/cash_smallmoney_text_style" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="15dip"
+                    android:background="@color/listview_line_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingLeft="20dip" >
+
+                    <TextView
+                        android:id="@+id/heji_hint"
+                        style="@style/cash_smallmoney_hint_style"
+                        android:text="合计" />
+
+                    <TextView
+                        android:id="@+id/balance_heji"
+                        style="@style/cash_smallmoney_text_style" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="15dip"
+                    android:background="@color/listview_line_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingLeft="20dip" >
+
+                    <TextView
+                        android:id="@+id/yingshou_hint"
+                        style="@style/cash_smallmoney_hint_style"
+                        android:text="应收" />
+
+                    <TextView
+                        android:id="@+id/balance_yingshou"
+                        style="@style/cash_smallmoney_text_style"
+                         android:textColor="#ff0000"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/listview_line_color" />
+
+                <View
+                    style="@style/horizontal_no_margin_divider_style"
+                    android:layout_height="20dip"
+                    android:background="#f7f7f7" />
+            </LinearLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingLeft="20dip"
+                >
+
+                <TextView
+                    style="@style/cash_smallmoney_hint_style"
+                    android:text="账户余额" />
+
+                <TextView
+                    android:id="@+id/zhanghu_balance"
+                    style="@style/cash_smallmoney_text_style" />
+            </RelativeLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <View
+                style="@style/horizontal_no_margin_divider_style"
+                android:layout_height="20dip"
+                android:background="#f7f7f7" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/listview_line_color" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dip" >
+
+                 <TextView
+                    style="@style/cash_smallmoney_hint_style"
+                    android:text="付款码" />
+                <EditText
+                    android:id="@+id/fkm_view"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:background="@null"
+                    android:hint="请输入付款码"
+                    android:paddingLeft="20dip"
+                    android:layout_marginRight="15dip"
+                    android:minHeight="100dip"
+                    android:textColor="@color/gray_text"
+                    android:textCursorDrawable="@drawable/editcursor_bg"
+                    android:textSize="16sp" />
+                <View 
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="5dip"
+                    android:background="@color/listview_line_color"
+                    android:layout_width="1px"/>
+                
+                <Button 
+                    android:id = "@+id/timebutton"
+                    android:layout_height="36dip"
+                    android:layout_width="wrap_content"
+                    android:minWidth="80dip"
+                    android:text="0S"
+                    android:background="@drawable/balance_pay_timebtn"
+                    android:layout_marginRight="20dip"
+                    android:layout_marginLeft="15dip"/>
+                
+            </LinearLayout>
+
+            <View style="@style/horizontal_no_margin_divider_style" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#f7f7f7" >
+
+                <Button
+                    android:id="@+id/commitbtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/comment_btn_height"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_marginTop="30dip"
+                    android:background="@drawable/button_green"
+                    android:text="确  认"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.meetrend.haopingdian.util.BounceScrollView>
+
+</LinearLayout>

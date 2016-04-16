@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="300dip"
+              android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/lv_popup"
+        android:layout_width="match_parent"
+        android:layout_height="300dip"
+        android:cacheColorHint="#00000000"
+        android:overScrollMode="never"
+        android:divider="@color/listview_line_color"
+        android:dividerHeight="1.2px"
+        android:fadingEdge="none"/>
+
+    <View
+        android:id="@+id/dummy_popup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
+

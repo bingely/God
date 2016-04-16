@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip">
+
+    <LinearLayout
+        android:id="@+id/titlelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="47dip"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="6"
+            android:gravity="center_vertical"
+            android:text="215-12-15"
+            android:textColor="#111111"
+            android:textSize="15dip" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right"
+            android:layout_weight="4"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/pay_num_tv"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="支付笔数：1222"
+                android:textColor="#111111"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:id="@+id/triangle_img"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/icon_collapse" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="33dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip" >
+
+        <TextView
+            android:id="@+id/incomme_tv"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="6"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="收入：1000"
+            android:textColor="#111111"
+            android:textSize="15dip" />
+
+        <TextView
+            android:id="@+id/price__tv"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="客单价：15"
+            android:textColor="#111111"
+            android:textSize="15dip" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/listview_line_color" />
+
+</LinearLayout>

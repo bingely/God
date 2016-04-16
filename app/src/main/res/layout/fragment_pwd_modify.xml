@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/bar"
+        style="@style/actionbar_style"
+        android:layout_alignParentTop="true">
+
+        <include layout="@layout/include_actionbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_member_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bar"
+        android:layout_marginBottom="@dimen/margin_18"
+        android:layout_marginTop="@dimen/margin_18"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View style="@style/horizontal_no_margin_divider_style" />
+
+        <LinearLayout
+            style="@style/setting_me_layout_style"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/me_info_style"
+                android:layout_width="70dip"
+                android:gravity="left|center_vertical"
+                android:text="@string/title_old_pwd" />
+
+            <EditText
+                android:id="@+id/old_pwd"
+                style="@style/me_info_style"
+                android:layout_weight="4"
+                android:background="@null"
+                android:digits="0123456789+-*/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:gravity="left|center_vertical"
+                android:hint="@string/hint_old_pwd"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:paddingLeft="15dip"
+                android:password="true"
+                android:textCursorDrawable="@drawable/editcursor_bg" />
+        </LinearLayout>
+
+        <View style="@style/horizontal_no_margin_divider_style" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/margin_18"
+            android:background="@color/window_bg_color" />
+
+        <!-- 新密码 -->
+
+        <View style="@style/horizontal_no_margin_divider_style" />
+
+        <LinearLayout
+            style="@style/setting_me_layout_style"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/me_info_style"
+                android:layout_width="70dip"
+                android:gravity="left|center_vertical"
+                android:text="@string/title_new_pwd" />
+
+            <EditText
+                android:id="@+id/new_pwd"
+                style="@style/me_info_style"
+                android:layout_weight="4"
+                android:background="@null"
+                android:digits="0123456789+-*/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:gravity="left|center_vertical"
+                android:hint="@string/hint_new_pwd"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:paddingLeft="15dip"
+                android:password="true"
+                android:textCursorDrawable="@drawable/editcursor_bg" />
+        </LinearLayout>
+
+        <View
+            style="@style/horizontal_no_margin_divider_style"
+            android:layout_marginLeft="20dip" />
+
+        <!-- 确认新密码 -->
+
+        <LinearLayout
+            style="@style/setting_me_layout_style"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/me_info_style"
+                android:layout_width="70dip"
+                android:gravity="left|center_vertical"
+                android:text="@string/title_confim_pwd" />
+
+            <EditText
+                android:id="@+id/confim_pwd"
+                style="@style/me_info_style"
+                android:layout_weight="4"
+                android:background="@null"
+                android:digits="0123456789+-*/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:gravity="left|center_vertical"
+                android:hint="@string/hint_confim_pwd"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:paddingLeft="15dip"
+                android:password="true"
+                android:textCursorDrawable="@drawable/editcursor_bg" />
+        </LinearLayout>
+
+        <View style="@style/horizontal_no_margin_divider_style" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pwd_ok"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/red_btn_height"
+        android:layout_below="@id/layout_member_info"
+        android:layout_margin="@dimen/margin_20"
+        android:background="@drawable/button_green"
+        android:gravity="center"
+        android:text="@string/confim_modify"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/txt_18" />
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" 
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C9C9CE"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <com.meetrend.haopingdian.widget.UISearchView
+            android:id="@+id/sv_search"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_search_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="cancelClick"
+            android:padding="5dp"
+            android:text="取消"
+            android:textColor="#00B916" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.meetrend.haopingdian.widget.ProgressDialog
+            android:id="@+id/pb_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <!--
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.viewpagerindicator.TitlePageIndicator
+                android:id="@+id/ti_indicator_search"
+                style="@style/inventory_list_indicator_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_search_list"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        -->
+
+        <ListView
+            android:id="@+id/lv_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_none_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="暂无结果" />
+
+    </FrameLayout>
+
+</LinearLayout>

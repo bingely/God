@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_contact_phone"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="#e2e2e2" >
+
+    <ViewSwitcher
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="7dip"
+        android:layout_marginLeft="14dip"
+        android:layout_marginRight="14dip"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_white" >
+
+        <RelativeLayout
+            android:id="@+id/dymclick_layout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/ic_search_api_holo_light"
+                android:drawablePadding="2dip"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:text="搜索"
+                android:textColor="#a6a6a6"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <EditText
+                android:id="@+id/search_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dip"
+                android:paddingRight="30dip"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/editcursor_bg" />
+
+            <ImageView
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="5dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/clear_pressed"
+                android:visibility="gone" />
+        </FrameLayout>
+    </ViewSwitcher>
+
+</FrameLayout>

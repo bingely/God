@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true" >
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        style="@style/actionbar_style"
+         >
+
+        <include layout="@layout/include_actionbar" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/global_header_height" >
+
+        <FrameLayout
+            android:id="@+id/layout_contact_phone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#ebeced" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:background="@drawable/bg_white" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/ic_search_api_holo_light"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:text="搜索" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <SearchView
+            android:id="@+id/search_contact_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:queryHint="输入关键字"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/lv_contact_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@null"
+            android:layout_marginRight="20dip"
+            android:choiceMode="multipleChoice"
+            android:fastScrollEnabled="false" />
+
+
+        <!-- 正中间字母弹出 -->
+        <RelativeLayout
+            android:id="@+id/section_toast_layout"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent" >
+
+            <TextView
+                android:id="@+id/section_toast_text"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textSize="32sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_connectphone_alphabet"
+            android:layout_width="20dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="#ffffff"
+            android:orientation="vertical" />
+
+        <com.meetrend.haopingdian.widget.ProgressDialog
+            android:id="@+id/pb_contact_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

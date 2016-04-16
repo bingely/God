@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="67dip"
+        android:background="@drawable/list_item_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/iv_message_photo"
+                android:layout_width="48dip"
+                android:layout_height="48dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/list_image_margin_top"
+                android:layout_marginTop="@dimen/list_image_margin_top"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/loading_default"
+                fresco:retryImageScaleType="centerCrop"
+                fresco:roundAsCircle="false"
+                fresco:roundBottomLeft="true"
+                fresco:roundBottomRight="true"
+                fresco:roundTopLeft="true"
+                fresco:roundTopRight="true"
+                fresco:roundedCornerRadius="5dp" />
+
+            <ImageView
+                android:id="@+id/undistributeimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wfp_l" />
+
+            <TextView
+                android:id="@+id/unread_msg_num_tv"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_gravity="right|top"
+                android:background="@drawable/un_read_msg_bg"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="10sp"
+                android:visibility="visible" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/top_layout"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_message_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/text_small_black"
+                    android:textSize="@dimen/message_list_name_textsize" />
+
+                <com.meetrend.haopingdian.widget.FaceiconTextView
+                    android:id="@+id/tv_message_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/top_layout"
+                    android:layout_marginTop="3dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_text"
+                    android:textSize="@dimen/message_list_context_textsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_message_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_text"
+                    android:textSize="@dimen/message_list_context_textsize" />
+
+                <ImageView
+                    android:id="@+id/cantalk_msg_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dip"
+                    android:src="@drawable/forbid_send"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/listview_line_color" />
+
+</LinearLayout>
+
+

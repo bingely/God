@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/phonedialog_bg" >
+
+    <LinearLayout
+        android:id = "@+id/contentlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="80dip"
+        android:gravity="center"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="5dip"
+        android:orientation="vertical"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="付款码消息已通过微信"
+            android:textColor="#000000"
+            android:textSize="19sp" />
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="发送至XXX"
+            android:textColor="#000000"
+            android:textSize="19sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/topline"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/contentlayout"
+        android:background="#AEB2B2" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_below="@id/topline"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sure"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/dialog_bottom_rigth_left_corners_selector"
+            android:text="确定"
+            android:textColor="#2a89e4"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

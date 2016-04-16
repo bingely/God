@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+   <com.facebook.drawee.view.SimpleDraweeView
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/headimg"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_margin="5dip"
+        android:layout_gravity="center_vertical"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/loading_default"
+        fresco:retryImageScaleType="centerCrop"
+        fresco:roundAsCircle="false"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundedCornerRadius="5dp" />    
+
+    <com.meetrend.haopingdian.widget.RoundImageView
+        android:id="@+id/delete"
+        android:layout_width="12dip"
+        android:layout_height="12dip"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="45dip"
+        android:src="@drawable/group_member_delete_icon" />
+</FrameLayout>

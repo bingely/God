@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="#FF881E"
+        android:orientation="vertical"
+        android:paddingLeft="7dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="昨日收入(元)"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_yesterday"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="00.00"
+            android:textColor="@android:color/white"
+            android:textSize="48sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:paddingLeft="7dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="总销售额(元)"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/tv_receivable"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="00.00"
+            android:textColor="#F5780A"
+            android:textSize="48sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <TextView
+            style="@style/income_tv_key"
+            android:text="累计收入(元)" />
+
+        <TextView
+            style="@style/income_tv_key"
+            android:text="本月收入(元)" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" >
+
+        <TextView
+            android:id="@+id/tv_total"
+            style="@style/income_tv_value" />
+
+        <TextView
+            android:id="@+id/tv_month"
+            style="@style/income_tv_value" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <TextView
+            style="@style/income_tv_key"
+            android:text="门店收入(元)" />
+
+        <TextView
+            style="@style/income_tv_key"
+            android:text="线上收入(元)" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" >
+
+        <TextView
+            android:id="@+id/tv_store"
+            style="@style/income_tv_value" />
+
+        <TextView
+            android:id="@+id/tv_online"
+            style="@style/income_tv_value" />
+    </LinearLayout>
+
+</LinearLayout>

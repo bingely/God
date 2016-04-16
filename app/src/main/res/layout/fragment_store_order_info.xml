@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EAEAEA"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionbar_style" >
+
+        <include layout="@layout/include_actionbar" />
+    </LinearLayout>
+
+    <include layout="@layout/include_orderinfo_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lv_store_order"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/store_order_listview_margin"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/pay_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/store_order_margin"
+        android:background="@drawable/button_red"
+        android:text="结账"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+<!--
+    <include layout="@layout/two_widget_title_layout" />-->
+
+    <include layout="@layout/head_search_edit_layout" />
+    <!--<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_gravity="center_horizontal"
+        android:background="#ebeced"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="15dip"
+        android:paddingRight="10dip">
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/search_edit_height"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/search_layout_bg">
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:src="@drawable/icon_search" />
+
+            <EditText
+                android:id="@+id/search_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="26dip"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入搜索关键字"
+                android:paddingLeft="10dip"
+                android:paddingRight="40dip"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textCursorDrawable="@drawable/editcursor_bg"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/clearbtn"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/clear_pressed"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/searchbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:gravity="left|center_vertical"
+            android:padding="5dip"
+            android:text="取消"
+            android:textColor="#ff0000"
+            android:textSize="16sp" />
+    </LinearLayout>-->
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/black_line_color" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/connact_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:gravity="center_vertical"
+                android:paddingBottom="4dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="5dip"
+                android:paddingTop="4dip"
+                android:text="通讯录"
+                android:textColor="#797979"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+            <ListView
+                android:id="@+id/connact_people_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:overScrollMode="never" />
+
+            <TextView
+                android:id="@+id/msg_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:gravity="center_vertical"
+                android:paddingBottom="4dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="5dip"
+                android:paddingTop="4dip"
+                android:text="消息"
+                android:visibility="gone"
+                android:textColor="#797979"
+                android:textSize="14sp" />
+
+            <ListView
+                android:id="@+id/msg_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:overScrollMode="never" />
+
+            <TextView
+                android:id="@+id/group_msg_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:gravity="center_vertical"
+                android:paddingBottom="4dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="5dip"
+                android:paddingTop="4dip"
+                android:text="群发消息"
+                android:visibility="gone"
+                android:textColor="#797979"
+                android:textSize="14sp" />
+
+            <ListView
+                android:id="@+id/group_msg_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:overScrollMode="never" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/emptyview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7f7f7"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="50dip"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="没有搜索结果"
+            android:textColor="@color/gray_text"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

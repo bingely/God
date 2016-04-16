@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <com.meetrend.haopingdian.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_inventory_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/dividergray" />
+
+    <TextView
+        android:id="@+id/lv_inventory_history_empty"
+        style="@style/empty_listview_style" />
+
+</LinearLayout>

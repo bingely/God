@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:fitsSystemWindows="true">
+    
+	 <include
+	     android:id="@+id/top_title_bar" 
+	     layout="@layout/three_icon_style_titlebar" />
+	 
+	 <FrameLayout 
+	     android:id="@+id/join_people_container"
+	     android:layout_height="fill_parent"
+	     android:layout_width="fill_parent"/>
+	 
+	  
+</LinearLayout>

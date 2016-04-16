@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?><!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="245dip"
+    android:orientation="vertical" >
+
+
+</LinearLayout>-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/list_item_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--活动时间-->
+        <TextView
+            android:id="@+id/item_overview_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:singleLine="true"
+            android:text="2015-06-14"
+            android:textColor="@color/gray_text"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/parent_right_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp">
+            <!--支付状态-->
+            <TextView
+                android:id="@+id/pay_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+            <!--活动状态-->
+            <TextView
+                android:id="@+id/item_overview_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/pay_status_tv"
+                android:gravity="center"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+        <!--活动名称-->
+        <TextView
+            android:id="@+id/item_overview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_overview_time"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            android:text="易武正山品饮活动"
+            android:textColor="#252525"
+            android:textSize="16sp" />
+
+        <FrameLayout
+            android:id="@+id/item_overview_fl"
+            android:layout_width="fill_parent"
+            android:layout_height="160dip"
+            android:layout_alignLeft="@+id/item_overview_name"
+            android:layout_alignRight="@+id/parent_right_layout"
+            android:layout_below="@+id/item_overview_name"
+            android:layout_marginTop="10dip">
+
+            <!--活动图片-->
+            <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/item_overview_img"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/big_loading_default"
+                fresco:retryImageScaleType="centerCrop" />
+            <!--已读人数-->
+            <TextView
+                android:id="@+id/item_read_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="6dip"
+                android:layout_marginRight="6dip"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </FrameLayout>
+        <!--参与人数-->
+        <TextView
+            android:id="@+id/item_overview_participate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/item_overview_fl"
+            android:layout_below="@+id/item_overview_fl"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@drawable/activity_players"
+            android:drawablePadding="4dip"
+            android:textColor="@color/gray_text" />
+
+        <TextView
+            android:id="@+id/item_overview_canyu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_overview_participate"
+            android:layout_toRightOf="@+id/item_overview_participate"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_overview_canyu"
+            android:layout_toRightOf="@+id/item_overview_canyu"
+            android:text="参与"
+            android:textColor="@color/gray_text" />
+
+        <TextView
+            android:id="@+id/item_overview_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_overview_participate"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@+id/item_overview_reply"
+            android:textColor="@color/gray_text" />
+
+        <TextView
+            android:id="@+id/item_overview_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_overview_share"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@+id/item_overview_praise"
+            android:textColor="@color/gray_text" />
+
+        <TextView
+            android:id="@+id/item_overview_praise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/item_overview_fl"
+            android:layout_alignTop="@+id/item_overview_reply"
+            android:textColor="@color/gray_text" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="15dip"
+        android:background="@color/window_bg"/>
+
+</LinearLayout>

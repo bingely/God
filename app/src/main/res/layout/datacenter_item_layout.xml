@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="101dip"
+    android:background="@drawable/list_item_bg"
+    android:orientation="vertical" >
+
+    <View style="@style/horizontal_no_margin_divider_style" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="101dip"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/datacenter_img"
+            android:layout_width="55dip"
+            android:layout_height="55dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="9dip"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="14dip"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#252525"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/moneynum_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:textColor="#ff3b2d"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="18dip"
+            android:src="@drawable/right_arrow" />
+    </LinearLayout>
+
+    <View style="@style/horizontal_no_margin_divider_style" />
+
+</LinearLayout>

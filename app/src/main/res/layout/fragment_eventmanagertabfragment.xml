@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:overScrollMode="never" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/money_amount_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:orientation="vertical"
+                android:background="@color/small_yellow"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dip"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="总收入（元）"
+                    android:textSize="16sp"
+                    android:drawablePadding="3dip"
+                    android:drawableLeft="@drawable/income"/>
+
+                <TextView
+                    android:id = "@+id/amount_money_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="240.00"
+                    android:layout_marginTop="20dip"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    android:textSize="26sp"/>
+            </LinearLayout>
+            <TextView
+                android:id = "@+id/top_empty_view"
+                android:layout_width="fill_parent"
+                android:layout_height="15dip"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/new_event_detail_textview_style"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="报名" />
+
+                    <TextView
+                        android:id="@+id/applyNumView"
+                        style="@style/new_event_detail_textview_gray_style"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/listview_line_color" />
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/new_event_detail_textview_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/event_tab_detail_padding"
+                            android:paddingRight="@dimen/event_tab_detail_padding"
+                            android:text="阅读" />
+
+                        <TextView
+                            android:id="@+id/read_person_numview"
+                            style="@style/new_event_detail_textview_gray_style"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/listview_line_color" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/new_event_detail_textview_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/event_tab_detail_padding"
+                            android:paddingRight="@dimen/event_tab_detail_padding"
+                            android:text="评论" />
+
+                        <TextView
+                            android:id="@+id/comment_person_numview"
+                            style="@style/new_event_detail_textview_gray_style"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/listview_line_color" />
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/new_event_detail_textview_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/event_tab_detail_padding"
+                            android:paddingRight="@dimen/event_tab_detail_padding"
+                            android:text="分享" />
+
+                        <TextView
+                            android:id="@+id/share_person_numview"
+                            style="@style/new_event_detail_textview_gray_style"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/listview_line_color" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/new_event_detail_textview_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/event_tab_detail_padding"
+                            android:paddingRight="@dimen/event_tab_detail_padding"
+                            android:text="赞" />
+
+                        <TextView
+                            android:id="@+id/prise_person_numview"
+                            style="@style/new_event_detail_textview_gray_style"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/new_event_detail_textview_gray_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="3dip"
+                android:paddingLeft="15dip"
+                android:paddingTop="3dip"
+                android:text="活动信息" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id = "@+id/event_name" 
+                    style="@style/new_event_detail_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dip"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    />
+
+                <View style="@style/horizontal_no_margin_divider_style" />
+
+                <RelativeLayout
+                    android:id="@+id/modify_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/list_item_bg"
+                    android:clickable="true"
+                    android:gravity="center" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dip"
+                        android:layout_centerInParent="true" >
+
+                        <ImageView
+                            android:id="@+id/edit_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/revise" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dip"
+                            android:layout_toRightOf="@+id/edit_img"
+                            android:gravity="center"
+                            android:text="修改"
+                            android:textColor="#e34135"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/new_event_detail_textview_gray_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="3dip"
+                android:paddingLeft="15dip"
+                android:paddingTop="3dip"
+                android:text="您可以进行以下操作" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/listview_line_color" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dip"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/sharelayout"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/list_item_bg"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/share" />
+
+                        <TextView
+                            style="@style/new_event_detail_textview_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/event_tab_detail_item_margintop"
+                            android:gravity="center"
+                            android:text="分享" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="fill_parent"
+                        android:background="@color/listview_line_color" />
+
+                    <LinearLayout
+                        android:id="@+id/looklayout"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/list_item_bg"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/look" />
+
+                        <TextView
+                            style="@style/new_event_detail_textview_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/event_tab_detail_item_margintop"
+                            android:gravity="center"
+                            android:text="查看" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="fill_parent"
+                        android:background="@color/listview_line_color" />
+
+                    <LinearLayout
+                        android:id="@+id/mass_send_layout"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/list_item_bg"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/wechat" />
+
+                        <TextView
+                            style="@style/new_event_detail_textview_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/event_tab_detail_item_margintop"
+                            android:gravity="center"
+                            android:text="群发微信" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/horizontal_no_margin_divider_style" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dip"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/send_agin_layout"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/list_item_bg"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/add" />
+
+                            <TextView
+                                style="@style/new_event_detail_textview_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/event_tab_detail_item_margintop"
+                                android:gravity="center"
+                                android:text="再发一个" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="fill_parent"
+                            android:background="@color/listview_line_color" />
+
+                        <LinearLayout
+                            android:id="@+id/open_apply_layout"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/list_item_bg"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <ImageView
+                                android:id="@+id/openbtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/open_text"
+                                style="@style/new_event_detail_textview_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/event_tab_detail_item_margintop"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="fill_parent"
+                            android:background="@color/listview_line_color" />
+
+                        <LinearLayout
+                            android:id="@+id/share_erm_layout"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/list_item_bg"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/qrcode" />
+
+                            <TextView
+                                style="@style/new_event_detail_textview_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/event_tab_detail_item_margintop"
+                                android:gravity="center"
+                                android:text="二维码" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/listview_line_color" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/emptyview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="努力加载中..."
+        android:textColor="@color/gray_text"
+        android:visibility="gone" />
+
+</FrameLayout>

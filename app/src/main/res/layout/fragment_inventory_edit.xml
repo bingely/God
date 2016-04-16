@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_gray"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionbar_style" >
+
+        <include layout="@layout/include_actionbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout style="@style/pay_order_style" >
+
+            <TextView
+                style="@style/pay_order_item_left_style"
+                android:text="库存量(件)" />
+
+            <EditText
+                android:id="@+id/inventory_piece"
+                style="@style/inventory_item_right_style" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/pay_order_style" >
+
+            <TextView
+                style="@style/pay_order_item_left_style"
+                android:text="展示量(件)" />
+
+            <EditText
+                android:id="@+id/inventory_piece_display"
+                style="@style/inventory_item_right_style" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/pay_order_style" >
+
+            <TextView
+                style="@style/pay_order_item_left_style"
+                android:text="平均进价(件)" />
+
+            <EditText
+                android:id="@+id/inventory_piece_price"
+                style="@style/inventory_item_right_style" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/pay_order_style" >
+
+            <TextView
+                style="@style/pay_order_item_left_style"
+                android:text="进价(件)" />
+
+            <EditText
+                android:id="@+id/inventory_offer_piece_price"
+                style="@style/inventory_item_right_style" />
+        </RelativeLayout>
+
+        <!-- 其他单位 -->
+
+        <RelativeLayout style="@style/pay_order_style" >
+
+            <TextView
+                android:id="@+id/inventory_unit_key"
+                style="@style/pay_order_item_left_style" />
+
+            <EditText
+                android:id="@+id/inventory_unit_value"
+                style="@style/inventory_item_right_style" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/pay_order_style" >
+
+            <TextView
+                android:id="@+id/inventory_unit_disp_key"
+                style="@style/pay_order_item_left_style" />
+
+            <EditText
+                android:id="@+id/inventory_unit_disp_value"
+                style="@style/inventory_item_right_style" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/pay_order_style" >
+
+            <TextView
+                android:id="@+id/inventory_unit_price_key"
+                style="@style/pay_order_item_left_style" />
+
+            <EditText
+                android:id="@+id/inventory_unit_price_value"
+                style="@style/inventory_item_right_style" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/pay_order_style" >
+
+            <TextView
+                android:id="@+id/inventory_unit_offer_price_key"
+                style="@style/pay_order_item_left_style" />
+
+            <EditText
+                android:id="@+id/inventory_unit_offer_price_value"
+                style="@style/inventory_item_right_style" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

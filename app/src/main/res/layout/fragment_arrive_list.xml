@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/recomment_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f7f7f7"
+                    android:padding="5dip"
+                    android:text="已报名"
+                    android:textColor="#8e8e93" />
+
+                <include layout="@layout/common_1dp_line" />
+
+                <com.meetrend.haopingdian.widget.GridView
+                    android:id="@+id/arrive_1_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="4"
+                    android:padding="10dp"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+
+                <include layout="@layout/common_1dp_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/arrive_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f7f7f7"
+                    android:padding="5dip"
+                    android:text="已到场"
+                    android:textColor="#8e8e93" />
+
+                <include layout="@layout/common_1dp_line" />
+
+                <com.meetrend.haopingdian.widget.GridView
+                    android:id="@+id/arrive_2_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="60dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="4"
+                    android:padding="10dp"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+
+                <include layout="@layout/common_1dp_line" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.meetrend.haopingdian.widget.ProgressDialog
+        android:id="@+id/progressdialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+</RelativeLayout>

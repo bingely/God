@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/third_menu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="60dip"
+    android:background="@drawable/list_item_bg"
+    android:orientation="vertical"
+    android:paddingTop="2dip" >
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="60dip"
+        android:background="#e6e9eb" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/third_img"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/loading_default"
+        fresco:retryImageScaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/pici_name"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@id/third_img"
+        android:gravity="center_vertical"
+       />
+
+</RelativeLayout> -->
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="60dip" >
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="60dip"
+        android:background="@color/listview_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/third_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="2dip"
+        android:paddingTop="2dip" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/third_img"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:scaleType="centerCrop"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/loading_default"
+            fresco:retryImageScaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/pici_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@id/third_img"
+            android:text="批次名称" />
+    </RelativeLayout>
+
+</LinearLayout>

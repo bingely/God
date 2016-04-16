@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/two_widget_title_layout" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:gravity="center"
+        android:text="请输入授权码，以验证身份"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/passlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dip"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+
+            <View
+                style="@style/widget_horizontal_line_style"
+                android:layout_height="1dip" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <View
+                    style="@style/widget_vertical_line_style"
+                    android:layout_width="1dip" />
+
+                <TextView
+                    android:id="@+id/one"
+                    style="@style/input_sqm_style" />
+
+                <View style="@style/widget_vertical_line_style" />
+
+                <TextView
+                    android:id="@+id/two"
+                    style="@style/input_sqm_style" />
+
+                <View style="@style/widget_vertical_line_style" />
+
+                <TextView
+                    android:id="@+id/three"
+                    style="@style/input_sqm_style" />
+
+                <View style="@style/widget_vertical_line_style" />
+
+                <TextView
+                    android:id="@+id/four"
+                    style="@style/input_sqm_style" />
+
+                <View
+                    style="@style/widget_vertical_line_style"
+                    android:layout_width="1dip" />
+            </LinearLayout>
+
+            <View
+                style="@style/widget_horizontal_line_style"
+                android:layout_height="1dip" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editpass"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:textColor="#ffffff" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string name="network_error">网络发生错误，稍后再试</string>
+   <string name="onfailure_msg">无法发送请求，请稍后再试。</string>
+   <string name="get_chat_msg_failed">无法获取聊天数据，请稍后再试。</string>
+   <string name="get_income_failed">无法获取收入数据</string>
+   <string name="login_failed">登录失败</string>
+   <string name="request_success">发送请求成功</string>
+</resources>
